@@ -24,6 +24,12 @@
   }
 }
 
+@mixin font($fz, $lh, $fw: 400) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
 %flex-center {
   display: flex;
   justify-content: center;

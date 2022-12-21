@@ -1,0 +1,30 @@
+$mobile-container: 320px;
+
+$mobile-padding: 20px;
+$tablet-padding: 32px;
+$desktop-padding: 16px;
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+$time-transition: 250ms;
+$function-transition: cubic-bezier(0.4, 0, 0.2, 1);
+$number-slides: 3;
+
+// colors
+$text-main-color: #131313;
+$text-reverse-color: #fcfcfc;
+$main-color: #f8d24e;
+$accent-color: #0a8817;
+$disabled-color: #ababab;
+
+// background colors
+$bgcolor-main: #84a178;
+
+$bgcolor-first-ice: #aec6a5;
+$bgcolor-second-ice: #efd478;
+$bgcolor-third-ice: #d6936d;
+
+$bgcolor-modal: #97af8d;
+$bgcolor-input: rgba(248, 210, 78, 0.1);
