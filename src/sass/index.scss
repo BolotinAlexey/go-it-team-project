@@ -1,2 +1,5 @@
-@import './common';
-@import './example';
+@import './utils/variables';
+@import './utils/mixins';
+@import './components/modern-normolize';
+@import './components/common';
+@import './components/reset';
