@@ -13,8 +13,8 @@
     margin-right: auto;
     width: 100%;
     min-width: 230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .top-label {
@@ -25,4 +25,18 @@
         line-height: 1.222;
         text-align: center;
         text-transform: uppercase;
+        color: rgba(19, 19, 19, 1);
+        margin-bottom: 12px;
+}
+.products-name {
+    font-family: 'Seymour One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 1.266;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color:rgba(19, 19, 19, 1);
+        margin-bottom: 40px;
 }
