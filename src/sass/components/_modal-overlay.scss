@@ -47,15 +47,16 @@
   transition: visibility $time-transition $function-transition,
     opacity $time-transition $function-transition;
 
-  height: 100px;
+  // height: 100px;
 }
 
 .button-close {
-  width: 20px;
-  height: 20px;
+  display: block;
+  width: 24px;
+  height: 24px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
   color: $text-main-color;
   background: transparent;
   @extend %flex-center;
@@ -63,8 +64,8 @@
   @include tablet() {
     width: 24px;
     height: 24px;
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
   }
 }
 
@@ -72,8 +73,8 @@
   .button-close {
     width: 24px;
     height: 24px;
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
   }
 }
 
