@@ -14,18 +14,15 @@
 }
 
 .modal-about {
-    position: relative;
-
-    padding: 32px 40px;
-
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100vw;
+    padding: 32px 40px;
     transform: translate(-50%, -50%);
 
     max-width: 568px;
-    background-color: rgba(252, 252, 252, 1);
+    background-color: $text-reverse-color;
     border: 2px solid $main-color;
     border-radius: 10px;
 }
@@ -50,7 +47,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 1.4;
 }
 
 .img-wrap {
@@ -74,7 +71,7 @@
     width: 65px;
     height: 90px;
     border-radius: 40px;
-    border: 2px solid #9CBE8F;
+    border: 2px solid $specifications-color;
     text-align: center;
 }
 
@@ -83,7 +80,7 @@
     margin-bottom: 6px;
     justify-content: center;
     align-items: center;
-    background-color: #9cbe8f;
+    background-color: $specifications-color;
     width: 53px;
     height: 53px;
     border-radius: 50%;
@@ -91,13 +88,13 @@
 
     font-weight: 500;
     font-size: 12px;
-    line-height: 28px;
+    line-height: 2.33;
 }
 
 .specification-list__descr {
     font-weight: 400;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1.25;
 }
 
 .modal-about__subtitle {
@@ -106,7 +103,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 1.4;
 }
 
 .ingredients-list {
@@ -150,16 +147,14 @@
     height: 42px;
     border-radius: 10px;
     border: 1px solid rgba(132, 161, 120, 1);
-    background-color: #FCF8EB;
+    background-color: $bgcolor-input-modalAbout;
 
     font-weight: 400;
     font-size: 14px;
-    line-height: 140%;
+    line-height: 1.43;
+    transition: outline $time-transition $function-transition;
 
-    transition: border $time-transition $function-transition,
-                outline $time-transition $function-transition;
     &:focus {
-        border: 1px solid transparent;
         outline: 2px solid $main-color;
     }
 }
@@ -171,19 +166,17 @@
     height: 84px;
     border-radius: 10px;
     border: 1px solid rgba(132, 161, 120, 1);
-    background-color: #FCF8EB;
+    background-color: $bgcolor-input-modalAbout;
     resize: none;
 
     font-weight: 400;
     font-size: 14px;
-    line-height: 140%;
+    line-height: 1.43;
+    transition: outline $time-transition $function-transition;
 
-    transition: border $time-transition $function-transition,
-            outline $time-transition $function-transition;
 
     &:focus {
-        border: 1px solid transparent;
-        outline: 2px solid $main-color;
+        outline: 1px solid $main-color;
     }
 }
 
@@ -196,7 +189,7 @@
 
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1.21;
 
     transition: background-color $time-transition $function-transition,
                 color $time-transition $function-transition;
