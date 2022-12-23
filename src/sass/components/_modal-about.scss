@@ -4,8 +4,14 @@
     max-width: 568px;
 }
 
+.about-btn {
+    display: block;
+    top: 12px;
+    right: 12px;
+}
+
 .modal-about__title {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 
     text-align: center;
     font-family: 'Seymour One';

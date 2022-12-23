@@ -37,7 +37,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 100; /* Должен быть выше чем у подложки*/
+  z-index: 100;
+  /* Должен быть выше чем у подложки*/
   text-align: center;
 
   /*  Побочные стили   */
@@ -45,16 +46,15 @@
   border: 2px solid $main-color;
   border-radius: 10px;
   transition: visibility $time-transition $function-transition,
-    opacity $time-transition $function-transition;
+  opacity $time-transition $function-transition;
 }
 
 .button-close {
-  display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 8px;
+  right: 8px;
   color: $text-main-color;
   background: transparent;
   @extend %flex-center;
@@ -62,8 +62,8 @@
   @include tablet() {
     width: 24px;
     height: 24px;
-    top: 12px;
-    right: 12px;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -71,8 +71,8 @@
   .button-close {
     width: 24px;
     height: 24px;
-    top: 12px;
-    right: 12px;
+    top: 20px;
+    right: 20px;
   }
 }
 
