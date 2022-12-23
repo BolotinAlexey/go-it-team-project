@@ -6,18 +6,56 @@
     background-size: cover;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+       background-image: url(../images/backgrounds/bg-mobile.jpg);
+        }
+
+    @media screen and (min-width: 768px) {
+            background-image: url(../images/backgrounds/bg-tablet.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/backgrounds/bg-tablet.jpg);
+                }
+        }
+                @media screen and (min-width: 1200px) {
+                    background-image: url(../images/backgrounds/bg-desktop.jpg);
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/backgrounds/bg-desktop.jpg);
+                        }
+                }
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    min-width: 230px;
+    max-width: 100%;
+    min-width: 250px;
     padding-left: 20px;
     padding-right: 20px;
+
+@media screen and (min-width: 480px) {
+        max-width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+                @media screen and (min-width: 1200px) {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
 }
 
 .label {
+    display: flex;
+    justify-content: center;
     margin: 0;
 }
 .top-label {
@@ -30,7 +68,18 @@
         text-transform: uppercase;
         color: rgba(19, 19, 19, 1);
         margin-bottom: 12px;
-}
+
+        @media screen and (min-width: 768px) {
+                font-size: 22px;
+                line-height: 1.227;
+            }
+
+                        @media screen and (min-width: 1200px) {
+                            font-size: 30px;
+                            line-height: 1.233;
+                        }
+        }
+
 .products-name {
     font-family: 'Seymour One';
         font-style: normal;
@@ -42,6 +91,17 @@
         text-transform: uppercase;
         color:rgba(19, 19, 19, 1);
         margin-bottom: 148px;
+
+        @media  screen and (min-width: 768px) {
+            margin-bottom: 200px;
+            font-size: 34px;
+            line-height: 1.264;
+        }
+                @media screen and (min-width: 1200px) {
+                    font-size: 36px;
+                    line-height: 1.25;
+                    margin-bottom: 300px;
+                }
 }
 
 .products-name {}
@@ -50,6 +110,15 @@
     display: flex;
     flex-direction: column;
     gap: 168px;
+
+    @media screen and (min-width: 768px) {
+           flex-direction: row;
+           gap: 16px;
+           justify-content: center;
+        }
+                @media screen and (min-width: 1200px) {
+                    gap: 29px;
+                }
 }
 
 .product-list__item {
@@ -63,18 +132,53 @@
     border-radius: 24px;
     position: relative;
 
+    @media screen and (min-width: 768px) {
+           width: 224px;
+        }
+                @media screen and (min-width: 1200px) {
+                    width: 370px;
+                    height: 536px;
+                }
+
 }
 
 .product-list__card::before {
     content: "";
     position: absolute;
-left: 40px;
+left: 50%;
+transform: translateX(-50%);
 top: -108px;
 width: 200px;
 height: 200px;
 border-radius: 50%;
 background-image: url(../images/ice-cream-mob\ 1x.jpg);
+background-position: center;
+background-size: contain;
     z-index: 10;
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/ice-cream-mob\ 2x.jpg);
+    }
+    @media screen and (min-width: 768px) {
+            background-image: url(../images/ice-cream-tab\ 1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/ice-cream-tab\ 2x.jpg);
+                }
+        }
+                @media screen and (min-width: 1200px) {
+                    background-image: url(../images/ice-cream-desc\ 1x.jpg);
+                    width: 302px;
+                    height: 302px;
+                    top: -183px;
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/ice-cream-desc\ 2x.jpg);
+                        }
+                }
 }
 
 .product-list__bg {
@@ -84,9 +188,15 @@ background-image: url(../images/ice-cream-mob\ 1x.jpg);
     background-color: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
     position: absolute;
     top: -108px;
-    left: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    @media screen and (min-width: 1200px) {
+            width: 302px;
+            height: 302px;
+            top: -167px;
+        }
 }
 
 .product-list__name {
@@ -102,6 +212,18 @@ font-family: 'Montserrat';
 
     padding-top: 120px;
     margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+           
+            font-size: 22px;
+            line-height: 1.227;
+        }
+                @media screen and (min-width: 1200px) {
+                    font-size: 30px;
+                    line-height: 1.233;
+                    margin-bottom: 66px;
+                    padding-top: 165px;
+                }
 }
 
 .product-list__text {
@@ -116,14 +238,35 @@ font-family: 'Montserrat';
     margin: 0;
     padding-right: 40px;
     padding-left: 40px;
+
+    @media screen and (min-width: 768px) {
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+                @media screen and (min-width: 1200px) {
+                    font-size: 16px;
+                    padding-left: 62px;
+                    padding-right: 62px;
+                }
 }
 
 .button-product {
     cursor: pointer;
-    height: 16px;
-    width: 40px;
-    background-image: url(../images/icons.svg#icon-arrow);
+    padding: 0;
+    margin: 0;
     fill: rgba(19, 19, 19, 1);
+    background-color: transparent;
+   position: absolute;
+   bottom: 16px;
+   left: 50%;
+   transform: translateX(-50%);
+
+@media screen and (min-width: 768px) {
+        bottom: 12px;
+    }
+@media screen and (min-width: 1200px) {
+    bottom: 60px;
+}
 
 }
 
@@ -133,19 +276,54 @@ font-family: 'Montserrat';
     background-color: rgba(239, 212, 120, 1);
     border-radius: 24px;
     position: relative;
+    @media screen and (min-width: 768px) {
+            width: 224px;
+        }
+                @media screen and (min-width: 1200px) {
+                    width: 370px;
+                    height: 536px;
+                }
 
 }
 
 .product-list__card-coffe::before {
     content: "";
     position: absolute;
-    left: 40px;
+    left: 50%;
+        transform: translateX(-50%);
     top: -108px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-image: url(../images/ice-coffe-mob\ 1x.jpg);
+    background-position: center;
+        background-size: contain;
     z-index: 10;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/ice-coffe-mob\ 2x.jpg);
+        }
+
+    @media screen and (min-width: 768px) {
+            background-image: url(../images/ice-coffe-tab\ 1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/ice-coffe-tab\ 2x.jpg);
+                }
+        }
+                @media screen and (min-width: 1200px) {
+                    background-image: url(../images/ice-coffe-desc\ 1x.jpg);
+                    width: 302px;
+                    height: 302px;
+                    top: -183px;
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/ice-coffe-desc\ 2x.jpg);
+                        }
+                }
 }
 
 .product-list__bg-coffe {
@@ -156,9 +334,15 @@ font-family: 'Montserrat';
         #D9D9D9;
     position: absolute;
     top: -108px;
-    left: 40px;
+    left: 50%;
+        transform: translateX(-50%);
     z-index: 1;
     box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+    @media screen and (min-width: 1200px) {
+            width: 302px;
+            height: 302px;
+            top: -167px;
+        }
 }
 
 .product-list__card-milk {
@@ -167,19 +351,53 @@ font-family: 'Montserrat';
     background-color:rgba(214, 147, 109, 1);
     border-radius: 24px;
     position: relative;
-
+    @media screen and (min-width: 768px) {
+            width: 224px;
+        }
+@media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 536px;
+}
 }
 
 .product-list__card-milk::before {
     content: "";
     position: absolute;
-    left: 40px;
+    left: 50%;
+        transform: translateX(-50%);
     top: -108px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-image: url(../images/milk-mob\ 1x.jpg);
+    background-position: center;
+        background-size: contain;
     z-index: 10;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/milk-mob\ 2x.jpg);
+        }
+
+    @media screen and (min-width: 768px) {
+            background-image: url(../images/milk-tab\ 1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/milk-tab\ 2x.jpg);
+                }
+        }
+                @media screen and (min-width: 1200px) {
+                    background-image: url(../images/milk-desc\ 1x.jpg);
+                    width: 302px;
+                    height: 302px;
+                    top: -183px;
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/milk-desc\ 2x.jpg);
+                        }
+}
 }
 
 .product-list__bg-milk {
@@ -190,7 +408,13 @@ font-family: 'Montserrat';
         #D9D9D9;
     position: absolute;
     top: -108px;
-    left: 40px;
+    left: 50%;
+        transform: translateX(-50%);
     z-index: 1;
     box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+    @media screen and (min-width: 1200px) {
+            width: 302px;
+            height: 302px;
+            top: -167px;
+        }
 }
