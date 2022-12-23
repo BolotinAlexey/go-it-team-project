@@ -1,13 +1,13 @@
 .modal-about {
-    width: 100vw;
-    padding: 32px 40px;
-    max-width: 568px;
+    padding: 28px 20px;
+    @media screen and (min-width: 768px) {
+        padding: 32px 40px; 
+    }
+     
 }
 
 .about-btn {
     display: block;
-    top: 12px;
-    right: 12px;
 }
 
 .modal-about__title {
@@ -34,8 +34,12 @@
 .specifications-list {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 9px;
+    
     margin-bottom: 48px;
+    @media screen and (min-width: 768px) {
+        gap: 20px;
+    }
 }
 
 .specifications-list__item {
