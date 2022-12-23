@@ -73,7 +73,7 @@ top: -108px;
 width: 200px;
 height: 200px;
 border-radius: 50%;
-background-image: url(../images/ice-coffe-mob\ 1x.jpg);
+background-image: url(../images/ice-cream-mob\ 1x.jpg);
     z-index: 10;
 }
 
@@ -116,4 +116,81 @@ font-family: 'Montserrat';
     margin: 0;
     padding-right: 40px;
     padding-left: 40px;
+}
+
+.button-product {
+    cursor: pointer;
+    height: 16px;
+    width: 40px;
+    background-image: url(../images/icons.svg#icon-arrow);
+    fill: rgba(19, 19, 19, 1);
+
+}
+
+.product-list__card-coffe {
+    width: 100%;
+    height: 420px;
+    background-color: rgba(239, 212, 120, 1);
+    border-radius: 24px;
+    position: relative;
+
+}
+
+.product-list__card-coffe::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: -108px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(../images/ice-coffe-mob\ 1x.jpg);
+    z-index: 10;
+}
+
+.product-list__bg-coffe {
+    height: 211px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)),
+        #D9D9D9;
+    position: absolute;
+    top: -108px;
+    left: 40px;
+    z-index: 1;
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+
+.product-list__card-milk {
+    width: 100%;
+    height: 420px;
+    background-color:rgba(214, 147, 109, 1);
+    border-radius: 24px;
+    position: relative;
+
+}
+
+.product-list__card-milk::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: -108px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(../images/milk-mob\ 1x.jpg);
+    z-index: 10;
+}
+
+.product-list__bg-milk {
+    height: 211px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)),
+        #D9D9D9;
+    position: absolute;
+    top: -108px;
+    left: 40px;
+    z-index: 1;
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
 }
