@@ -1,0 +1,171 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+
+  @include tablet {
+    padding-top: 20px;
+  }
+  
+@media screen and (min-width: 320px) and (max-width: 767px) {
+ width: 100%;
+ max-width: 480px;
+}
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-logo {
+  @include tablet {
+   
+  }
+}
+.menu-open {
+  display: block;
+  border: none;
+  background-color: transparent;
+  
+
+  @include tablet {
+   
+  }
+}
+
+.header-btn {
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    display: none;
+  }
+
+  @include tablet {
+    min-width: 152px;
+    height: 42px;
+  
+  background: $main-color;
+  border-radius: 10px;
+  padding: 12px 36px;
+  margin: 0 32px;
+
+font-family: 'Montserrat';
+@include font (14px, calc(17 / 14), $fw: 600);
+text-align: center;
+}}
+
+.header-btn::after {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  background-image: url(../images/header/ep_arrow-right-bold.svg);
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+// _____MENU_______
+
+.mob-menu {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+  background: $bgcolor-modal;
+  top: 0;
+
+  padding-top: 12px;
+ 
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  overflow-y: scroll;
+
+  @include desktop {
+    display: none;
+  }
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
+  padding-left: 32px;
+  padding-right: 20px;
+  
+  @include tablet {
+    margin-bottom: 76px;
+    padding-right: 32px;
+  }
+}
+.menu-logo {
+  @include tablet {
+
+  }
+}
+.menu-close {
+  display: block;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  fill: #FCFCFC;
+}
+
+.menu-item {
+  text-align: center;
+}
+.menu-item:not(:last-child) {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.menu-list {
+   margin: auto 0 110px 0;
+  //  width: 100%;
+   padding: 0 32px;
+}
+.menu-link {
+font-family: 'Montserrat';
+@include font (32px, calc(39 / 32), $fw: 700);
+text-decoration: none;
+color: $text-reverse-color;
+transition: $time-transition $function-transition;
+
+@include tablet {
+  @include font (48px, calc(59 / 48), $fw: 700);
+}
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color:$text-main-color;
+} 
+
+.menu-btn {
+  min-width: 152px;
+  height: 42px;
+
+background: $main-color;
+border-radius: 10px;
+padding: 12px 36px;
+
+font-family: 'Montserrat';
+@include font (14px, calc(17 / 14), $fw: 600);
+text-align: center;
+margin: auto;
+
+@include tablet {
+  display: none;
+}
+}
+
+.menu-btn::after {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  background-image: url(../images/header/ep_arrow-right-bold.svg);
+  background-size: contain;
+width: 12px;
+height: 12px;
+margin-left: 4px;
+}
