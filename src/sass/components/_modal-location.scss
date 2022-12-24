@@ -1,13 +1,25 @@
 .modal-location { 
+    max-width: 280px;
     padding: 28px;
+
+    @media screen and (min-width: 767px){
+        max-width: 568px;
+        padding: 32px 60px;
+    }
 }
 .modal__close-button {
     margin-left: auto;
     display: block;
+    background-color: #fff;
 }
 .modal-icon {
     width: 11px;
     height: 11px;
+
+    @media screen and (min-width: 767px){
+        width: 13px;
+        height: 13px;
+    }
 }
 .modal_text {
     font-family: 'Seymour One';
@@ -16,13 +28,30 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    text-align: center;
+
+    @media screen and (min-width: 767px){
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 .modal_window {
-    width: 224px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 224px;
     height: 199px;
     border-radius: 10px;
+
+    @media screen and (min-width: 767px){
+        max-width: 448px;
+        height: 260px;
+    }
 }
 .modal_button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
     color: $text-main-color;
     padding: 12px 34px;
     font-style: normal;
@@ -33,5 +62,10 @@
     align-items: center;
     text-align: center;
     background:$main-color;
-    border-radius: 10px
+    border-radius: 10px;
+
+    @media screen and (min-width: 767px){
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
