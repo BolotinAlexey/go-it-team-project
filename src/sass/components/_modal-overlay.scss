@@ -53,26 +53,35 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
+
+  display: block;
+
   color: $text-main-color;
   background: transparent;
   @extend %flex-center;
 
+  &:hover {
+    color: $accent-color;
+  }
+
   @include tablet() {
     width: 24px;
     height: 24px;
-    top: 20px;
-    right: 20px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .button-close {
+.icon-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+
+  @include tablet() {
     width: 24px;
     height: 24px;
-    top: 20px;
-    right: 20px;
   }
 }
 
@@ -82,4 +91,14 @@
 .overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.modal__title {
+  text-align: center;
+  font-family: 'Seymour One';
+
+  @include font(16px, 1.5);
+  @include tablet() {
+    @include font(20px, 1.4);
+  }
 }
