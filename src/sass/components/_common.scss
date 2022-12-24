@@ -3,7 +3,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: $text-main-color;
-  position: relative;
 }
 ul {
   list-style: none;
@@ -25,7 +24,7 @@ button {
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
 
-  outline: 1px solid red;
+  // outline: 1px solid red;
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     padding-left: $tablet-padding;

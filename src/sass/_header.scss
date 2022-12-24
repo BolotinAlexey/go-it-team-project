@@ -1,16 +1,15 @@
 .header_container {
-  position: fixed;
   display: flex;
   align-items: center;
   padding-top: 12px;
+  padding: 12px 20px 0;
   
   @include tablet {
-    padding-top: 20px;
+    padding: 20px 32px 0;
   }
   
   @include desktop {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 16px 0;
   }
 @media screen and (min-width: 320px) and (max-width: 767px) {
  width: 100%;
@@ -18,11 +17,17 @@
 }
 }
 
+.header--color {
+  background-color: $bgcolor-main;
+}
+
 .header-nav {
+  display: flex;
+  align-items: center;
   margin-right: auto;
 
   @include desktop {
-  display: flex;}
+}
 }
 
 .header-logo {
@@ -40,24 +45,19 @@
    margin-left: 308px;
   }
 }
-.header-item {
 
-}
 
 .header-link{
   text-decoration: none;
   font-family: 'Montserrat';
   @include font (16px, calc(20 / 16), $fw: 700);
-// color: $text-reverse-color;
-color: black;
-transition: color $time-transition $function-transition;
+  color: $text-reverse-color;
+  transition: color $time-transition $function-transition;
 }
 .header-link:hover,
 .header-link:focus,
-.header-link:active
-{
+.header-link:active {
 color: $main-color;
-
 }
 
 .menu-open {
@@ -65,10 +65,12 @@ color: $main-color;
   border: none;
   background-color: transparent;
   
-
   @include desktop {
    display: none;
   }
+}
+.menu-open-icon {
+  fill: #ffffff;
 }
 
 .header-btn {
@@ -124,8 +126,6 @@ text-align: center;
   background: $bgcolor-modal;
   top: 0;
 
-  padding-top: 12px;
- 
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -140,16 +140,16 @@ text-align: center;
     visibility: hidden;
     pointer-events: none;
  }
+
 .menu-header {
   display: flex;
   align-items: center;
   margin-bottom: 51px;
-  padding-left: 32px;
-  padding-right: 20px;
+  padding: 12px 20px 0;
   
   @include tablet {
     margin-bottom: 76px;
-    padding-right: 32px;
+    padding: 20px 32px 0;
   }
 }
 .menu-logo {
@@ -227,18 +227,82 @@ margin-left: 4px;
 }
 
 // ___________________HERO___________________
+
 .hero {
   background-color: $bgcolor-main;
-  
+  position: relative;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+.hero-posiihion{
+ 
 }
 
 .hero-title {
   font-family: 'Seymour One';
+  @include font (26px, calc(33 / 26), $fw: 400);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-reverse-color;
+  padding-top: 50px;
+  margin-bottom: 32px;
+   
+  @include desktop {
   @include font (38px, calc(48 / 38), $fw: 400);
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: $text-reverse-color;
 max-width: 367px;
-padding-top: 118px;
-padding-bottom: 402px;
+padding-top: 118px;}
+}
+
+
+.hero-title-size {
+  @include font (34px, calc(33 / 34), $fw: 400);
+
+  @include desktop {
+    @include font (38px, calc(48 / 38), $fw: 400);
+  }
+}
+.btn-products {
+  border: 2px solid $main-color;
+border-radius: 8px;
+background-color: transparent;
+padding: 11px 26px;
+min-width: 108px;
+
+font-family: 'Montserrat';
+@include font (12px, calc(15 / 12), $fw: 600);
+color: #000000;
+text-align: center;
+
+&:hover {
+  border: 2px solid $accent-color;
+}
+
+@include desktop {
+  
+}
+}
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 236px;
+}
+
+.btn-made {
+  border: 2px solid transparent;
+  @include font (12px, calc(15 / 12), $fw: 600);
+ text-decoration-line: underline;
+color: $main-color;
+background-color: transparent;
+
+&:hover {
+  color: $accent-color;
+}
+&:focus {
+  color: $text-reverse-color;
+} 
+&:disabled {
+  color: $disabled-color;
+}
 }
