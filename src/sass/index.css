@@ -285,7 +285,7 @@ footer {
     gap: 30px;
   }
 }
-.msg-list .item:hover .msg-icon, .msg-list .item:focus .msg-icon {
+.msg-list .item a:hover .msg-icon, .msg-list .item a:focus .msg-icon, .msg-list .item a:active .msg-icon {
   fill: #fcfcfc;
 }
 .msg-list .msg {
@@ -408,6 +408,9 @@ footer {
 .footer-text-tel a {
   text-decoration: none;
   color: #fcfcfc;
+}
+.footer-text-tel a:hover, .footer-text-tel a:focus {
+  color: #0a8817;
 }
 
 .footer-index {

@@ -76,9 +76,12 @@ footer {
     gap: 30px;
   }
   .item {
-    &:hover .msg-icon,
-    &:focus .msg-icon {
-      fill: #fcfcfc;
+    a {
+      &:hover .msg-icon,
+      &:focus .msg-icon,
+      &:active .msg-icon {
+        fill: #fcfcfc;
+      }
     }
   }
   .msg {
@@ -179,6 +182,10 @@ footer {
   a {
     text-decoration: none;
     color: #fcfcfc;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 .footer-index {
