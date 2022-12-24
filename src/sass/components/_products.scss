@@ -1,5 +1,5 @@
 .products {
-    background-image: url(../images/backgrounds/bg-mobile.jpg);
+    background-image: url(../images/backgrounds/bg-mob\ 1x.jpg);
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,22 +8,22 @@
     padding-bottom: 60px;
 
     @include retina {
-        background-image: url(../images/backgrounds/bg-mobile.jpg);
+        background-image: url(../images/backgrounds/bg-mob\ 2x.jpg);
     }
 
     @include tablet {
-        background-image: url(../images/backgrounds/bg-tablet.jpg);
+        background-image: url(../images/backgrounds/bg-tab\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/backgrounds/bg-tablet.jpg);
+            background-image: url(../images/backgrounds/bg-tab\ 2x.jpg);
         }
     }
 
     @include desktop {
-        background-image: url(../images/backgrounds/bg-desktop.jpg);
+        background-image: url(../images/backgrounds/bg-desk\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/backgrounds/bg-desktop.jpg);
+            background-image: url(../images/backgrounds/bg-desk\ 2x.jpg);
         }
     }
 }
