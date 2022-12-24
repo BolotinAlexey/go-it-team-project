@@ -103,30 +103,30 @@
 
 
 .border-icecream {
-  border: 2px solid #9cbe8f;
+  border: 2px solid $bgcolor-modal-icecream;
 }
 
 .bg-icecream {
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
-  background-color: #9cbe8f;
+  background-color: $bgcolor-modal-icecream;
 }
 
 .border-icecoffee {
-  border: 2px solid #EFD478;
+  border: 2px solid $bgcolor-second-ice;
 }
 
 .bg-icecoffee {
   box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
-  background-color: #EFD478;
+  background-color: $bgcolor-second-ice;
 }
 
 .border-milkshake {
-  border: 2px solid #D6936D;
+  border: 2px solid $bgcolor-third-ice;
 }
 
 .bg-milkshake {
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
-  background-color: #D6936D;
+  background-color: $bgcolor-third-ice;
 }
 
 .specification-list__descr {
