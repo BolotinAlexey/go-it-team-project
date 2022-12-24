@@ -1,1 +1,15 @@
 // ---------Gallery----------
+
+.gallery {
+  position: relative;
+  top: -32px;
+  @include tablet() {
+    top: -98px;
+  }
+}
+
+.gallery__set {
+}
+.gallery__item {
+  position: absolute;
+}
