@@ -105,11 +105,25 @@
 margin-bottom: 16px;
 background: #F8D24E;
 border-radius: 10px;
-background-color: #F8D24E;
+     &:hover {
+    background: $accent-color;
+}
+        &:focus {
+            background: $accent-color;
+            color: #ffffff;
+        }
 }
 
 .contacts__franchise {
     border: 2px solid #F8D24E;
     border-radius: 10px;
     background-color: transparent;
+    &:hover {
+        border-color: $accent-color;
+    }
+    &:focus {
+    border-color: $accent-color;
+    color: #ffffff;
+    
+    }
 }
