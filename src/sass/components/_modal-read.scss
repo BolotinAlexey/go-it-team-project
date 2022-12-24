@@ -1,0 +1,51 @@
+.modal-read {
+    padding: 28px;
+
+    @media screen and (min-width: 768px) {
+            padding: 32px 60px;
+    }
+}
+
+.icon-close {
+    width: 20px;
+    height: 20px;
+
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.modal-read__title {
+    margin-bottom: 20px;
+
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+}
+
+.modal-read__video {
+    margin-bottom: 20px;
+
+    width: 224px;
+    height: 199px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+        width: 448px;
+        height: 205px;
+    }
+}
+
+.modal-read__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+}
