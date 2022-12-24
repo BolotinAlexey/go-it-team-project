@@ -1,5 +1,5 @@
 .products {
-    background-image: url(../images/backgrounds/bg-mob\ 1x.jpg);
+    background-image: url(../images/products/bg-mob\ 1x.jpg);
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,22 +8,22 @@
     padding-bottom: 60px;
 
     @include retina {
-        background-image: url(../images/backgrounds/bg-mob\ 2x.jpg);
+        background-image: url(../images/products/bg-mob\ 2x.jpg);
     }
 
     @include tablet {
-        background-image: url(../images/backgrounds/bg-tab\ 1x.jpg);
+        background-image: url(../images/products/bg-tab\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/backgrounds/bg-tab\ 2x.jpg);
+            background-image: url(../images/products/bg-tab\ 2x.jpg);
         }
     }
 
     @include desktop {
-        background-image: url(../images/backgrounds/bg-desk\ 1x.jpg);
+        background-image: url(../images/products/bg-desk\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/backgrounds/bg-desk\ 2x.jpg);
+            background-image: url(../images/products/bg-desk\ 2x.jpg);
         }
     }
 }
@@ -33,19 +33,22 @@
     margin-right: auto;
     max-width: 100%;
     min-width: 250px;
-    padding: $mobile-padding;
+    padding-right: 20px;
+    padding-left: 20px;
 
 
     @include mobile {
-        max-width: 480px;
+        max-width: $mobile;
     }
 
     @include tablet {
-        padding: $tablet-padding;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 
     @include desktop {
-        padding: $desktop-padding;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 }
 
@@ -56,33 +59,24 @@
 }
 
 .top-label {
-    font-family: 'Montserrat';
+    @include font (18px, 1.222, 800);
     font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.222;
-    text-align: center;
     text-transform: uppercase;
     color: $text-main-color;
     margin-bottom: 12px;
 
     @include tablet {
-        font-size: 22px;
-        line-height: 1.227;
+        @include font (22px, 1.227, 800);
     }
 
     @include desktop {
-        font-size: 30px;
-        line-height: 1.233;
+        @include font (30px, 1.233, 800);
     }
 }
 
 .products-name {
     font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 1.266;
+    @include font (30px, 1.266);
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -91,13 +85,11 @@
 
     @include tablet {
         margin-bottom: 200px;
-        font-size: 34px;
-        line-height: 1.264;
+        @include font (34px, 1.264);
     }
 
     @include desktop {
-        font-size: 36px;
-        line-height: 1.25;
+        @include font (36px, 1.25);
         margin-bottom: 300px;
     }
 }
@@ -146,31 +138,31 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../images/ice-cream-mob\ 1x.jpg);
+    background-image: url(../images/products/ice-cream-mob\ 1x.jpg);
     background-position: center;
     background-size: contain;
     z-index: 10;
 
     @include retina {
-        background-image: url(../images/ice-cream-mob\ 2x.jpg);
+        background-image: url(../images/products/ice-cream-mob\ 2x.jpg);
     }
 
     @include tablet {
-        background-image: url(../images/ice-cream-tab\ 1x.jpg);
+        background-image: url(../images/products/ice-cream-tab\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/ice-cream-tab\ 2x.jpg);
+            background-image: url(../images/products/ice-cream-tab\ 2x.jpg);
         }
     }
 
     @include desktop {
-        background-image: url(../images/ice-cream-desc\ 1x.jpg);
+        background-image: url(../images/products/ice-cream-desc\ 1x.jpg);
         width: 302px;
         height: 302px;
         top: -183px;
 
         @include retina {
-            background-image: url(../images/ice-cream-desc\ 2x.jpg);
+            background-image: url(../images/products/ice-cream-desc\ 2x.jpg);
         }
     }
 }
@@ -195,11 +187,7 @@
 }
 
 .product-list__name {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
+    @include font (20px, 1.2, 700);
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -209,25 +197,18 @@
     margin-bottom: 40px;
 
     @include tablet {
-
-        font-size: 22px;
-        line-height: 1.227;
+        @include font (22px, 1.227, 700);
     }
 
     @include desktop {
-        font-size: 30px;
-        line-height: 1.233;
+        @include font (30px, 1.233, 700);
         margin-bottom: 66px;
         padding-top: 165px;
     }
 }
 
 .product-list__text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.76;
+    @include font (14px, 1.76);
     text-align: center;
     letter-spacing: 0.04em;
     color: $text-main-color;
@@ -295,31 +276,31 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../images/ice-coffe-mob\ 1x.jpg);
+    background-image: url(../images/products/ice-coffe-mob\ 1x.jpg);
     background-position: center;
     background-size: contain;
     z-index: 10;
 
     @include retina {
-        background-image: url(../images/ice-coffe-mob\ 2x.jpg);
+        background-image: url(../images/products/ice-coffe-mob\ 2x.jpg);
     }
 
     @include tablet {
-        background-image: url(../images/ice-coffe-tab\ 1x.jpg);
+        background-image: url(../images/products/ice-coffe-tab\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/ice-coffe-tab\ 2x.jpg);
+            background-image: url(../images/products/ice-coffe-tab\ 2x.jpg);
         }
     }
 
     @include desktop {
-        background-image: url(../images/ice-coffe-desc\ 1x.jpg);
+        background-image: url(../images/products/ice-coffe-desc\ 1x.jpg);
         width: 302px;
         height: 302px;
         top: -183px;
 
         @include retina {
-            background-image: url(../images/ice-coffe-desc\ 2x.jpg);
+            background-image: url(../images/products/ice-coffe-desc\ 2x.jpg);
         }
     }
 }
@@ -370,31 +351,31 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../images/milk-mob\ 1x.jpg);
+    background-image: url(../images/products/milk-mob\ 1x.jpg);
     background-position: center;
     background-size: contain;
     z-index: 10;
 
     @include retina {
-        background-image: url(../images/milk-mob\ 2x.jpg);
+        background-image: url(../images/products/milk-mob\ 2x.jpg);
     }
 
     @include tablet {
-        background-image: url(../images/milk-tab\ 1x.jpg);
+        background-image: url(../images/products/milk-tab\ 1x.jpg);
 
         @include retina {
-            background-image: url(../images/milk-tab\ 2x.jpg);
+            background-image: url(../images/products/milk-tab\ 2x.jpg);
         }
     }
 
     @include desktop {
-        background-image: url(../images/milk-desc\ 1x.jpg);
+        background-image: url(../images/products/milk-desc\ 1x.jpg);
         width: 302px;
         height: 302px;
         top: -183px;
 
         @include retina {
-            background-image: url(../images/milk-desc\ 2x.jpg);
+            background-image: url(../images/products/milk-desc\ 2x.jpg);
         }
     }
 }
