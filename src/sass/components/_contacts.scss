@@ -2,33 +2,66 @@
     background: #84A178;
 
 }
-
+.contacts-thumb {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
 .contacts__adress {
-padding-top: 40px;
+    
+    padding-top: 40px;
     padding-left: 32px;
     padding-bottom: 24px;
-    background: #FCFCFC;
     width: 280px;
     height: 412px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    background: #FCFCFC;
 }
 
 .contacts__category {
     display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 4px 22px;
     margin-bottom: 20px; 
     width: 80px;
-    height: 22px;
+    height: auto;
     background: #F8D24E;
     border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
 }
 
-.contacts__city {}
+.foodtruck {
+    width: 120px;
+}
 
-.adress {}
+.contacts__city {
+    display: block;
+}
 
-.contacts__text {}
+.adress {
+    width: 212px;
+    height: 70px;
+
+    
+}
+.adress-list {
+    font-size: 12px;
+        letter-spacing: 0.04em;
+        font-weight: 500;
+}
+.contacts__text {
+    font-style: inherit;
+    line-height: 186%;
+    color: #131313;
+    text-decoration: none;
+
+}
 
 .city__adress {}
 
