@@ -5,6 +5,8 @@
   padding-bottom: 393px;
   max-width: 100%;
   background-image: url(../images/backgrounds/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 
   @include mobile() {
     background-image: url(../images/backgrounds/bg-tablet.jpg);
