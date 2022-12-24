@@ -33,6 +33,8 @@ footer {
   text-align: center;
   color: $text-main-color;
   border-radius: 10px;
+  transition: background-color 250ms linear, color 250ms linear,
+    border-color 250ms linear;
 }
 .button-location {
   background-color: $main-color;
@@ -94,6 +96,7 @@ footer {
   }
   .msg-icon {
     fill: $bgcolor-main;
+    transition: fill 250ms linear;
   }
 }
 .footer-flex {

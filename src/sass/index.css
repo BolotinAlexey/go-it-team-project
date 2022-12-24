@@ -236,6 +236,7 @@ footer {
   text-align: center;
   color: #131313;
   border-radius: 10px;
+  transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear;
 }
 
 .button-location {
@@ -302,6 +303,7 @@ footer {
 }
 .msg-list .msg-icon {
   fill: #84a178;
+  transition: fill 250ms linear;
 }
 
 @media screen and (min-width: 768px) {
