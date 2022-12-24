@@ -1,25 +1,7 @@
-// .modal-backdrop.is-hidden .modal-buy-now {
-//   transform: translate(-50%, -50%) scale(0.2);
-// }
-
 .modal-buy-now {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
   padding: 28px;
-
   width: 100%;
   min-height: auto;
-
-  background: $text-reverse-color;
-  border: 2px solid $main-color;
-  border-radius: 10px;
-
-  transform: translate(-50%, -50%) scale(1);
-  transition-property: transform;
-  transition-duration: $time-transition;
-  transition-timing-function: $function-transition;
 
   @media screen and (min-width: 280px) {
     width: 280px;
@@ -33,32 +15,28 @@
   }
 }
 
-.modal-buy-now__button-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-
-  display: inline-flex;
+.modal-buy-now__btn-close {
   margin: 0;
   padding: 0;
-  justify-content: center;
-  align-items: center;
-
   border: none;
-  background: transparent;
 
   transition-property: fill;
   transition-duration: $time-transition;
   transition-timing-function: $function-transition;
 }
 
-.modal-buy-now__button-close-icon {
-  width: 24px;
-  height: 24px;
+.modal-buy-now__btn-close-icon {
+  width: 20px;
+  height: 20px;
   fill: $text-main-color;
 
-  .modal-buy-now__button-close:hover & {
+  .modal-buy-now__btn-close:hover & {
     fill: $main-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -126,6 +104,11 @@
   text-transform: uppercase;
 
   color: $text-main-color;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }
 
 .buy-now-product__item-input {
@@ -136,6 +119,10 @@
   height: 100%;
   appearance: none;
   outline: none;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
 }
 
 .buy-now-product__item-input--green::before {
@@ -211,6 +198,9 @@
   .buy-now-product__item-input:checked + & {
     background-color: #96af8c;
     box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.1);
+
+    transition-duration: $time-transition;
+    transition-timing-function: $function-transition;
   }
 
   &::before {
@@ -238,6 +228,9 @@
   .buy-now-product__item-input:checked + & {
     background-color: $bgcolor-second-ice;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+
+    transition-duration: $time-transition;
+    transition-timing-function: $function-transition;
   }
 
   &::before {
@@ -265,6 +258,9 @@
   .buy-now-product__item-input:checked + & {
     background-color: $bgcolor-third-ice;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+
+    transition-duration: $time-transition;
+    transition-timing-function: $function-transition;
   }
 
   &::before {
