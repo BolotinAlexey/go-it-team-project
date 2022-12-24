@@ -1,0 +1,410 @@
+// .modal-backdrop.is-hidden .modal-buy-now {
+//   transform: translate(-50%, -50%) scale(0.2);
+// }
+
+.modal-buy-now {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 28px;
+
+  width: 100%;
+  min-height: auto;
+
+  background: $text-reverse-color;
+  border: 2px solid $main-color;
+  border-radius: 10px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition-property: transform;
+  transition-duration: $time-transition;
+  transition-timing-function: $function-transition;
+
+  @media screen and (min-width: 280px) {
+    width: 280px;
+    min-height: 991px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 568px;
+    min-height: 644px;
+    padding: 32px 54px;
+  }
+}
+
+.modal-buy-now__button-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background: transparent;
+
+  transition-property: fill;
+  transition-duration: $time-transition;
+  transition-timing-function: $function-transition;
+}
+
+.modal-buy-now__button-close-icon {
+  width: 24px;
+  height: 24px;
+  fill: $text-main-color;
+
+  .modal-buy-now__button-close:hover & {
+    fill: $main-color;
+  }
+}
+
+.modal-buy-now__title {
+  margin-bottom: 83px;
+
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: center;
+  color: $text-main-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 103px;
+
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.buy-now-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 82px;
+  margin-bottom: 31px;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    column-gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.buy-now-product__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 132px;
+  height: 135px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 32px) / 3);
+  }
+}
+
+.buy-now-product__item-label {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $text-main-color;
+}
+
+.buy-now-product__item-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  outline: none;
+}
+
+.buy-now-product__item-input--green::before {
+  position: absolute;
+  top: calc(-50%);
+  z-index: 5;
+
+  content: '';
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  background-image: url('./../images/modal-buy-now/buy-now-ice-cream-desktop@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('./../images/modal-buy-now/buy-now-ice-cream-desktop@2x.jpg');
+  }
+}
+
+.buy-now-product__item-input--yellow::before {
+  position: absolute;
+  top: calc(-50%);
+  z-index: 5;
+
+  content: '';
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  background-image: url('./../images/modal-buy-now/buy-now-ice-coffee-desktop@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('./../images/modal-buy-now/buy-now-ice-coffee-desktop@2x.jpg');
+  }
+}
+
+.buy-now-product__item-input--brown::before {
+  position: absolute;
+  top: calc(-50%);
+  z-index: 5;
+
+  content: '';
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  background-image: url('./../images/modal-buy-now/buy-now-milkshake-desktop@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('./../images/modal-buy-now/buy-now-milkshake-desktop@2x.jpg');
+  }
+}
+
+.buy-now-product__item--green {
+  border: 2px solid #96af8c;
+  border-radius: 15px;
+
+  .buy-now-product__item-input:checked + & {
+    background-color: #96af8c;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.1);
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(-50% + 7px);
+
+    content: '';
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+}
+
+.buy-now-product__item--yellow {
+  border: 2px solid $bgcolor-second-ice;
+  border-radius: 15px;
+
+  .buy-now-product__item-input:checked + & {
+    background-color: $bgcolor-second-ice;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(-50% + 7px);
+
+    content: '';
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+}
+
+.buy-now-product__item--brown {
+  border: 2px solid $bgcolor-third-ice;
+  border-radius: 15px;
+
+  .buy-now-product__item-input:checked + & {
+    background-color: $bgcolor-third-ice;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(-50% + 7px);
+
+    content: '';
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.contacts-field {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 26;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border: none;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts-field__input {
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.contacts-field__input,
+.contacts-field__user-comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: $text-main-color;
+
+  border: 1px solid $bgcolor-main;
+  border-radius: 10px;
+  background-color: rgba(248, 210, 78, 0.1);
+  outline: transparent;
+
+  cursor: pointer;
+
+  transition-property: border;
+  transition-duration: $time-transition;
+  transition-timing-function: $function-transition;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $main-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 368px;
+    font-size: 14px;
+  }
+}
+
+.contacts-field__user-comments {
+  min-height: 65px;
+
+  @media screen and (min-width: $tablet) {
+    min-height: 84px;
+  }
+}
+
+.contacts-field__user-comments {
+  resize: none;
+}
+
+.contacts-field__input::placeholder,
+.contacts-field__user-comments::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $text-main-color;
+}
+
+.contacts-field__input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid red;
+}
+
+.modal-buy-now-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 114px;
+  height: 42px;
+  padding: 12px 34px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  letter-spacing: 0.06em;
+  border: 0px solid transparent;
+
+  border-radius: 10px;
+
+  color: $text-main-color;
+  background-color: $main-color;
+
+  transition-property: background-color;
+  transition-duration: $time-transition;
+  transition-timing-function: $function-transition;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    color: #ffffff;
+    background-color: $accent-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 121px;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
