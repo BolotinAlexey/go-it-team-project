@@ -1,8 +1,25 @@
 <header class="container header_container ">
   <nav class="header-nav">
     <a class="header_logo" href="#">
-      <img srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x" src="./images/header/logo-mob.png" width="40" height="37" alt="logo">
-    </a>
+      <picture>
+        <source
+            srcset="./images/header/logo-desk.png 1x, ./images/header/logo-desk-2x.png 2x"
+            media="(min-width: 1200px)">
+        <source
+            srcset="./images/header/logo-tab.png 1x, ./images/header/logo-tab-2x.png 2x"
+            media="(min-width: 768px)">
+        <source
+            srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
+            media="(max-width: 767px)">
+        <img src="./images/header/logo-mob.png" alt="logo" width="">
+    </picture>
+    </a> 
+    <ul class="header-list">
+      <li class="header-item"><a class="header-link" href="#home">Home</a></li>
+      <li class="header-item"><a class="header-link" href="#how">How it’s made?</a></li>
+      <li class="header-item"><a class="header-link" href="#products">Our products</a></li>
+      <li class="header-item"><a class="header-link" href="#contact">Contact</a></li>
+    </ul>
   </nav>
   <button type="button" class="menu-open" data-menu-open>
     <svg class="menu-open-icon" width="32" height="32">
@@ -11,7 +28,7 @@
   </button>
   <button type="button" class="button header-btn">Buy now</button>
 
-<div class="mob-menu" data-menu>
+<div class="mob-menu is-hidden" data-menu>
   <div class="menu-header">
     <a href="#">
       <picture>
@@ -43,12 +60,14 @@
 </header>
 
 
-  <!-- <section>
-<h1>ice cream
-  made with
-  passion</h1>
-  <ul>
-    <li><a href="#products"><button type="button">Products</button></a></li>
-    <li><a href="#how"><button type="button">How it’s made?</button></a></li>
-  </ul>
-  </section> -->
+  <section class="hero">
+<div class="container">
+  <h1 class="hero-title">ice cream
+    made with
+    passion</h1>
+    <ul>
+      <li><a href="#products"><button type="button">Products</button></a></li>
+      <li><a href="#how"><button type="button">How it’s made?</button></a></li>
+    </ul>
+</div>
+  </section>

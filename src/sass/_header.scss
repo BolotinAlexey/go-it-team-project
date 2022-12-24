@@ -1,12 +1,17 @@
 .header_container {
+  position: fixed;
   display: flex;
   align-items: center;
   padding-top: 12px;
-
+  
   @include tablet {
     padding-top: 20px;
   }
   
+  @include desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 @media screen and (min-width: 320px) and (max-width: 767px) {
  width: 100%;
  max-width: 480px;
@@ -15,21 +20,54 @@
 
 .header-nav {
   margin-right: auto;
+
+  @include desktop {
+  display: flex;}
 }
 
 .header-logo {
-  @include tablet {
-   
+  @include desktop {
+  
   }
 }
+.header-list {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+   gap: 28px;
+   margin-left: 308px;
+  }
+}
+.header-item {
+
+}
+
+.header-link{
+  text-decoration: none;
+  font-family: 'Montserrat';
+  @include font (16px, calc(20 / 16), $fw: 700);
+// color: $text-reverse-color;
+color: black;
+transition: color $time-transition $function-transition;
+}
+.header-link:hover,
+.header-link:focus,
+.header-link:active
+{
+color: $main-color;
+
+}
+
 .menu-open {
   display: block;
   border: none;
   background-color: transparent;
   
 
-  @include tablet {
-   
+  @include desktop {
+   display: none;
   }
 }
 
@@ -50,7 +88,19 @@
 font-family: 'Montserrat';
 @include font (14px, calc(17 / 14), $fw: 600);
 text-align: center;
+
+@include desktop {
+  // margin: 0 16px 0 0;
+}
 }}
+.header-btn:hover,
+.header-btn:focus {
+  background-color: $accent-color;
+}
+
+.header-btn:focus {
+  color: #ffffff;
+}
 
 .header-btn::after {
   content: "";
@@ -63,7 +113,8 @@ text-align: center;
   margin-left: 4px;
 }
 
-// _____MENU_______
+
+// ___________________MENU___________________
 
 .mob-menu {
   position: fixed;
@@ -84,6 +135,11 @@ text-align: center;
     display: none;
   }
 }
+ .is-hidden {
+  opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+ }
 .menu-header {
   display: flex;
   align-items: center;
@@ -168,4 +224,21 @@ margin: auto;
 width: 12px;
 height: 12px;
 margin-left: 4px;
+}
+
+// ___________________HERO___________________
+.hero {
+  background-color: $bgcolor-main;
+  
+}
+
+.hero-title {
+  font-family: 'Seymour One';
+  @include font (38px, calc(48 / 38), $fw: 400);
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: $text-reverse-color;
+max-width: 367px;
+padding-top: 118px;
+padding-bottom: 402px;
 }
