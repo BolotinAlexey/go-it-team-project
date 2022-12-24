@@ -3,18 +3,24 @@
 .container-customer {
   padding-top: 178px;
   padding-bottom: 393px;
+  max-width: 100%;
   background-image: url(../images/backgrounds/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile() {
+    background-image: url(../images/backgrounds/bg-tablet.jpg);
+  }
 
   @include tablet() {
     padding-top: 283px;
     padding-bottom: 379px;
-    background-image: url(../images/backgrounds/bg-tablet.jpg);
+    background-image: url(../images/backgrounds/bg-desktop.jpg);
   }
 
   @include desktop() {
     padding-top: 464px;
     padding-bottom: 228px;
-    background-image: url(../images/backgrounds/bg-desktop.jpg);
   }
 }
 
