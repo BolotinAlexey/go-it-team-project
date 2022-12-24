@@ -7,15 +7,24 @@
   </button>
   <p class="modal_text">Our Locations</p>
   <div class="modal_window">
-    <!-- <picture>
+    <picture>
       <source
-      srcset="./images/map/map-1x.jpg 1x,
-              ./images/map/map-2x.jpg 2x,
-              ./images/map/map-tablet-1x.jpg 1x,
-              ./images/map/map-tablet-2x.jpg 2x"/>
-
-    <img src="./images/map/map-1x.jpg 1x" alt="map">          
-    </picture> -->
+          srcset="
+            ./image/map/map-tablet-1x.jpg 1x,
+            ./image/map/map-tablet-2x.jpg 2x"
+          media="(min-width: 1200px)"/>
+      <source
+          srcset="
+            ./image/map/map-tablet-1x.jpg 1x,
+            ./image/map/map-tablet-2x.jpg 2x"
+          media="(min-width: 768px)"/>
+    <source
+        srcset="
+          ./image/map/map-1x.jpg 1x,
+          ./image/map/map-2x.jpg 2x"
+          media="(min-width: 480px)"/>
+  <img src="./image/photo3-mob-1x.jpg" alt="карта"                
+  </picture>
   </div>
   <button class="modal_button" type="button">Open map</button>
   </div>
