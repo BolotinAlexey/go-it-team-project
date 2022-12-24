@@ -1,7 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  font-family: 'Montserat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $text-main-color;
 }
 ul {
@@ -17,6 +17,19 @@ img {
 button {
   cursor: pointer;
   border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .container {

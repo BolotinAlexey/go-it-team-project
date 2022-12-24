@@ -1,0 +1,33 @@
+.modal-read {
+  padding: 28px;
+
+  @include tablet() {
+    padding: 32px 60px;
+  }
+}
+
+.modal-read__title {
+  margin-bottom: 20px;
+
+  @include tablet() {
+    margin-bottom: 32px;
+  }
+}
+
+.modal-read__video {
+  margin-bottom: 20px;
+
+  width: 224px;
+  height: 199px;
+  border-radius: 10px;
+
+  @include tablet() {
+    margin-bottom: 32px;
+    width: 448px;
+    height: 205px;
+  }
+}
+
+.modal-read__text {
+  @include font(14px, 1.4);
+}
