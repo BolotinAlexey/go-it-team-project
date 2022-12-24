@@ -1,28 +1,10 @@
 .modal-location {
-    @mixin mobile {
-        @media screen and (min-width: $mobile) {
-            padding: 28px;
-        }
-    }
-    @mixin tablet {
-        @media screen and (min-width: $tablet) {
-        padding: 32px 60px;
-        }
-    }
+padding: 28px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-.modal-container {
-    @mixin mobile {
-      @media screen and (min-width: $mobile) {
-        width:$mobile;
-        }
-    }
-        @mixin tablet {
-            @media screen and (min-width: $tablet) {
-            width: $tablet;
-            }
-        }
-}
-.modal-close {
+.modal__close-button {
     display: block;
 }
 .modal-icon {
