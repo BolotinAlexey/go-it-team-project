@@ -8,8 +8,27 @@
     border: 2px solid #f8d24e;
     border-radius: 10px;
     padding: 28px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 
     position: relative;
+
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 568px;
+        min-height: 458px;
+        padding: 32px 60px;
+     
+    }
 }
 
 
@@ -28,8 +47,6 @@
     position: absolute;
     top: 8px;
     right: 8px;
-
-
   
 }
 
@@ -55,6 +72,7 @@
        
         font-size: 20px;
         line-height: 1.4;
+        margin-bottom: 32px;
     }
     
 }
@@ -62,6 +80,7 @@
 
 
 .modal__text {
+    margin-top: 0;
     margin-bottom: 24px;
 
     font-family: 'Montserrat';
@@ -103,6 +122,7 @@
     background: $bgcolor-input;
     border: 1px solid #84A178;;
     border-radius: 10px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
     &:focus {
@@ -133,6 +153,7 @@
     line-height: 1.4;
     letter-spacing: 0.01em;
     color: $text-main-color; 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .modal-form__input:focus+&,
     .modal-form__input:not(:placeholder-shown)+& {
@@ -147,6 +168,32 @@
 
 .form-order__field--comment {
     margin-bottom: 24px;
+}
+
+
+.modal-form__comment {
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+    resize: none;
+    background: $bgcolor-input;
+    border: 1px solid $bgcolor-main;
+    border-radius: 10px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: $main-color;
+    }
+
+    &::placeholder {
+        color: $bgcolor-input;
+    }
+
+    &:placeholder-shown {
+        border-color: $bgcolor-main;
+    }
+
 }
 
 
