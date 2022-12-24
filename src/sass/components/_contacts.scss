@@ -1,5 +1,6 @@
 .contacts {
     background: #84A178;
+    padding-bottom: 60px;
 
 }
 .contacts-thumb {
@@ -8,6 +9,13 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px;
+    @include tablet {
+        margin-bottom: 40px;
+    }
+    @include desktop {
+        margin-bottom: 60px;
+    }
 }
 .contacts__adress {
     padding-top: 40px;
@@ -83,6 +91,25 @@
 .contacts__tel {
     margin-bottom: 6px;
 }
-.contacts__locations {}
+.contacts__btn {
+    display: block;
+    width: 196px;
+    height: 42px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.28;
+}
 
-.contacts__franchise {}
+.contacts__locations {
+margin-bottom: 16px;
+background: #F8D24E;
+border-radius: 10px;
+background-color: #F8D24E;
+}
+
+.contacts__franchise {
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+    background-color: transparent;
+}
