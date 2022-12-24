@@ -49,6 +49,19 @@
     height: 199px;
     border-radius: 10px;
 
+        @media screen and (min-width: 480px){
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url(../images/maps/map-1x.jpg);
+            }
+        @media screen and (min-width:768px) {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url(../images/maps/tablet-map-1x.jpg);
+            }        
+
     @media screen and (min-width: 767px){
         max-width: 448px;
         height: 260px;
