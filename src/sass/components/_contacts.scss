@@ -6,12 +6,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 .contacts__adress {
-    
     padding-top: 40px;
     padding-left: 32px;
+    padding-right: 32px;
     padding-bottom: 24px;
     width: 280px;
     height: 412px;
@@ -32,7 +33,7 @@
     border-radius: 4px;
     font-weight: 500;
     font-size: 12px;
-    line-height: 120%;
+    line-height: 1.20;
     letter-spacing: 0.04em;
 }
 
@@ -47,28 +48,41 @@
 .adress {
     width: 212px;
     height: 70px;
-
+    margin-bottom: 48px;
     
 }
 .adress-list {
+    letter-spacing: 0.04em;
+    font-weight: 500;
     font-size: 12px;
-        letter-spacing: 0.04em;
-        font-weight: 500;
+    color: #131313;
 }
 .contacts__text {
     font-style: inherit;
-    line-height: 186%;
-    color: #131313;
+    line-height: 1.86;
     text-decoration: none;
-
+    color: #131313;
 }
 
-.city__adress {}
+.city__adress {
+    color: #D6936D;
+    line-height: 1.83;
+    margin-top: 8px;
+}
 
-.schedule {}
+.schedule {
+    margin-bottom: 48px;
+}
+.holiday-schedule {
+    margin-bottom: 8px;
+}
+.contacts__time {
+    color: #ABABAB;
 
-.contacts__time {}
-
+}
+.contacts__tel {
+    margin-bottom: 6px;
+}
 .contacts__locations {}
 
 .contacts__franchise {}
