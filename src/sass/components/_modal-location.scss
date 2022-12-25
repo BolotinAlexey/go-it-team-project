@@ -7,51 +7,6 @@
         padding: 32px 60px;
     }
 }
-.modal__title {
-    text-align: center;
-    font-family: 'Seymour One';
-
-    @include font(16px, 1.5);
-
-    @include tablet() {
-        @include font(20px, 1.4);
-    }
-}
-.button-close {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-
-    display: block;
-    $function-transition: cubic-bezier(0.4, 0, 0.2, 1);
-    color: $text-main-color;
-    background: transparent;
-    @extend %flex-center;
-
-    &:hover {
-        color: $accent-color;
-    }
-
-    @include tablet() {
-        width: 24px;
-        height: 24px;
-    }
-}
-.icon-close {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    fill: currentColor;
-    $function-transition: cubic-bezier(0.4, 0, 0.2, 1);
-
-    @include tablet() {
-        width: 24px;
-        height: 24px;
-    }
-}
 .modal_window {
     margin-left: auto;
     margin-right: auto;
