@@ -60,11 +60,15 @@
     
 }
 .adress-list {
+    position: relative;
     letter-spacing: 0.04em;
     font-weight: 500;
     font-size: 12px;
     color: #131313;
+    // border-bottom: 1px solid #E1E1E1;
+
 }
+
 .contacts__text {
     font-style: inherit;
     line-height: 1.86;
@@ -79,7 +83,8 @@
 }
 
 .schedule {
-    margin-bottom: 48px;
+    padding-bottom: 24px;
+    padding-top: 24px;
 }
 .holiday-schedule {
     margin-bottom: 8px;
