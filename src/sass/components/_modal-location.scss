@@ -99,10 +99,10 @@
     }
 &:hover
      {
-        fill: $accent-color #0a8817;
+        background: $accent-color #0a8817;
     }
 &:focus {
-    fill: $accent-color #0a8817;
-    color: #fff;
+        background: $accent-color #0a8817;
+        color: #fff;
     }
 }
