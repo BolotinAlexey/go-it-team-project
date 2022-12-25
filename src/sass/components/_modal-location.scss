@@ -103,6 +103,6 @@
     }
 &:focus {
         background: $accent-color;
-        color: #fff;
+        color: $text-reverse-color;
     }
 }
