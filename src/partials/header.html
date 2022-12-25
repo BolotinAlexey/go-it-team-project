@@ -1,5 +1,5 @@
 <header class="header--color ">
-  <div class="container header_container">
+ <div class="container header_container">
     <nav class="header-nav">
         <a class="header_logo" href="#">
           <picture>
@@ -12,12 +12,12 @@
             <source
                 srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
                 media="(max-width: 767px)">
-            <img src="./images/header/logo-mob.png" alt="logo" width="">
+            <img src="./images/header/logo-mob.png" alt="logo">
         </picture>
         </a> 
         <ul class="header-list">
           <li class="header-item"><a class="header-link" href="#home">Home</a></li>
-          <li class="header-item"><a class="header-link" href="#how">How it’s made?</a></li>
+          <li class="header-item"><a class="header-link" href="#made">How it’s made?</a></li>
           <li class="header-item"><a class="header-link" href="#products">Our products</a></li>
           <li class="header-item"><a class="header-link" href="#contact">Contact</a></li>
         </ul>
@@ -27,8 +27,10 @@
             <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
-      <button type="button" class="button header-btn">Buy now</button>
-     </div>
+      <button type="button" class="button header-btn">Buy now 
+        <svg class="btn-arrow" width="12" height="12">
+        <use href="./images/icons.svg#icon-arrow-single"></use>
+    </svg></button>
   </div>
 
 <div class="mob-menu is-hidden" data-menu>
@@ -41,7 +43,7 @@
         <source
             srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
             media="(max-width: 767px)">
-        <img src="./images/header/logo-mob.png" alt="logo" width="">
+        <img src="./images/header/logo-mob.png" alt="logo">
     </picture>
     </a>
     <button type="button" class="menu-close" data-menu-close>
@@ -58,37 +60,17 @@
       <li class="menu-item"><a class="menu-link" href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <button class="button  menu-btn" type="button">Buy now</button>
-</div>
+  <button type="button" class="button menu-btn">Buy now 
+    <svg class="btn-arrow" width="12" height="12">
+    <use href="./images/icons.svg#icon-arrow-single"></use>
+</svg></button>
 </header>
 
 
   
     <section class="hero-bgr">
-      <picture>
-        <source
-            srcset="./images/header/dots-desk.png 1x, ./images/header/dots-desk-2x.png 2x"
-            media="(min-width: 1200px)">
-        <source
-            srcset="./images/header/dots-tab.png 1x, ./images/header/dots-tab-2x.png 2x "
-            media="(min-width: 768px)">
-        <source
-            srcset="./images/header/dots-mob.png 1x, ./images/header/dots-mob-2x.png 2x"
-            media="(max-width: 767px)">
-            <img class="hero-img-dots" src="./images/header/dots-desk.png" width="" alt="dots">
-    </picture>
-
       <div class="hero container">
-        <picture >
-          <source
-          srcset="./images/header/manyice-desk.png 1x, ./images/header/manyice-desk-2x.png 2x"
-          media="(min-width: 1200px)">
-          <source
-          srcset="./images/header/many-ice-tab.png 1x, ./images/header/manyice-tab-2x.png 2x "
-          media="(min-width: 768px)">
-          <img class="picture-ice" src="./images/header/manyice-desk.png" alt="ice">
-        </picture>
-        
+     
         <div class="hero-wrap">
           <h1 class="hero-title">ice cream made with <span class="hero-title-size">passion</span> </h1>
           <ul class="hero-headline">
@@ -100,8 +82,8 @@
         </div>
 
         <ul class="hero-buttons">
-          <li><a href="#products"><button type="button" class="btn-products">Products</button></a></li>
-          <li><a href="#how"><button type="button" class="btn-made">How it’s made?</button></a></li>
+          <li><a href="#product" class="btn-products">Products</a></li>
+          <li><a href="#made" class="btn-made">How it’s made?</a></li>
         </ul>
 
         <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
@@ -111,26 +93,42 @@
         </svg>
         </div>
 
+        <picture >
+          <source
+          srcset="./images/header/manyice-desk.png 1x, ./images/header/manyice-desk-2x.png 2x"
+          media="(min-width: 1200px)">
+          <source
+          srcset="./images/header/many-ice-tab.png 1x, ./images/header/manyice-tab-2x.png 2x "
+          media="(min-width: 768px)">
+          <img class="picture-ice" src="./images/header/manyice-desk.png" alt="ice">
+        </picture>
+
         <div class="hero-img">
-          <!-- <picture>
+          <picture>
             <source
-                srcset="./images/header/ice-desk.png 1x, ./images/header/ice-desk-2x.png 2x"
-                media="(min-width: 1200px)">
-            <source
-                srcset="./images/header/ice-tab.png 1x, ./images/header/ice-tab-2x.png 2x "
-                media="(min-width: 768px)">
-            <source
-                srcset="./images/header/ice-mob.png 1x, ./images/header/ice-mob-2x.png 2x"
-                media="(max-width: 767px)">
-                <img class="hero-img-ice" src="./images/header/ice-desk.png" alt="ice">
-                <img src="./images/header/ice-mob.png" class="hero-img-ice size="177px" alt="" 
-                srcset="./images/header/ice-desk.png 1x 177w,
-                 ./images/header/ice-desk-2x.png 2x 177w,
-                 ./images/header/ice-tab.png 1x 268w,
-                 ./images/header/ice-tab-2x.png 2x 268w,
-                 ./images/header/ice-mob.png 1x 456w,
-                 ./images/header/ice-mob-2x.png 2x 456w">
-        </picture> -->
+            srcset="./images/header/ice-desk.png 1x, ./images/header/ice-desk-2x.png 2x"
+            media="(min-width: 1200px)">
+        <source
+            srcset="./images/header/ice-tab.png 1x, ./images/header/ice-tab-2x.png 2x"
+            media="(min-width: 768px)">
+        <source
+            srcset="./images/header/ice-mob.png 1x, ./images/header/ice-mob-2x.png 2x"
+            media="(max-width: 767px)">
+            <img class="hero-img-ice" src="./images/header/ice-desk.png" alt="ice">
+        </picture>
+
+        <picture>
+          <source
+              srcset="./images/header/dots-desk.png 1x, ./images/header/dots-desk-2x.png 2x"
+              media="(min-width: 1200px)">
+          <source
+              srcset="./images/header/dots-tab.png 1x, ./images/header/dots-tab-2x.png 2x "
+              media="(min-width: 768px)">
+          <source
+              srcset="./images/header/dots-mob.png 1x, ./images/header/dots-mob-2x.png 2x"
+              media="(max-width: 767px)">
+              <img class="hero-img-dots" src="./images/header/dots-desk.png" alt="dots">
+      </picture>
         </div> 
   </div>
   </section>

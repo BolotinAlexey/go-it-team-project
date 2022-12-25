@@ -4,71 +4,63 @@
 
 .header_container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   padding-top: 12px;
   padding: 12px 20px 0;
-  
+
   @include tablet {
     padding: 20px 32px 0;
+    align-items: center;
   }
-  
+
   @include desktop {
     padding: 8px 16px 0;
   }
-@media screen and (min-width: 320px) and (max-width: 767px) {
- width: 100%;
- max-width: 480px;
-}
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    max-width: 480px;
+  }
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   margin-right: auto;
-
-  @include desktop {
-}
 }
 
-.header-logo {
-  @include desktop {
-  
-  }
-}
 .header-list {
   display: none;
 
   @include desktop {
     display: flex;
     align-items: center;
-   gap: 28px;
-   margin-left: 308px;
+    gap: 28px;
+    margin-left: 308px;
   }
 }
-.header-item {
-  padding: 32px 0 13px;
-}
 
-.header-link{
+.header-link {
   text-decoration: none;
   font-family: 'Montserrat';
-  @include font (16px, calc(20 / 16), $fw: 700);
+  @include font(16px, calc(20 / 16), $fw: 700);
   color: $text-reverse-color;
+  padding: 32px 0 13px;
   transition: color $time-transition $function-transition;
-}
-.header-link:hover,
-.header-link:focus,
-.header-link:active {
-color: $main-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $main-color;
+  }
 }
 
 .menu-open {
   display: block;
   border: none;
   background-color: transparent;
-  
+
   @include desktop {
-   display: none;
+    display: none;
   }
 }
 .menu-open-icon {
@@ -76,7 +68,7 @@ color: $main-color;
 }
 
 .header-btn {
-  @media screen and (min-width: 320px) and (max-width: 767px){
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     display: none;
   }
 
@@ -84,45 +76,45 @@ color: $main-color;
     min-width: 152px;
     height: 42px;
     margin-left: 32px;
-  
-  background: $main-color;
-  border-radius: 10px;
-  padding: 12px 36px;
+    display: flex;
+    align-items: center;
 
-font-family: 'Montserrat';
-@include font (14px, calc(17 / 14), $fw: 600);
-text-align: center;
+    background: $main-color;
+    border-radius: 10px;
+    padding: 12px 36px;
 
-@include desktop {
- 
+    @include font(14px, calc(17 / 14), $fw: 600);
+    text-align: center;
+
+    transition: background-color $time-transition $function-transition,
+      color $time-transition $function-transition,
+      fill $time-transition $function-transition;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+
+    &:focus {
+      color: #ffffff;
+      fill: #ffffff;
+    }
+
+    &:focus.btn-arrow {
+      fill: #ffffff;
+    }
+  }
 }
-}}
-.header-btn:hover,
-.header-btn:focus {
-  background-color: $accent-color;
-}
 
-.header-btn:focus {
-  color: #ffffff;
-}
-
-.header-btn::after {
-  content: "";
-  display: inline-flex;
-  justify-content: center;
-  background-image: url(../images/header/ep_arrow-right-bold.svg);
-  background-size: contain;
-  width: 12px;
-  height: 12px;
+.btn-arrow {
   margin-left: 4px;
 }
-
 
 // ___________________MENU_______________________________________________________
 
 .mob-menu {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
 
   width: 100vw;
   height: 100vh;
@@ -138,39 +130,36 @@ text-align: center;
     display: none;
   }
 }
- .is-hidden {
+.is-hidden {
   opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
- }
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .menu-header {
   display: flex;
   align-items: center;
   margin-bottom: 51px;
   padding: 12px 20px 0;
-  
+
   @include tablet {
     margin-bottom: 76px;
     padding: 20px 32px 0;
   }
 }
-.menu-logo {
-  @include tablet {
 
-  }
-}
 .menu-close {
   display: block;
   border: none;
   background-color: transparent;
   margin-left: auto;
-  fill: #FCFCFC;
+  fill: #fcfcfc;
 }
 
 .menu-item {
   text-align: center;
 }
+
 .menu-item:not(:last-child) {
   margin-bottom: 32px;
 
@@ -178,57 +167,64 @@ text-align: center;
     margin-bottom: 40px;
   }
 }
+
 .menu-list {
-   margin: auto 0 110px 0;
-  //  width: 100%;
-   padding: 0 32px;
+  margin: auto 0 110px 0;
+  padding: 0 32px;
 }
+
 .menu-link {
-font-family: 'Montserrat';
-@include font (32px, calc(39 / 32), $fw: 700);
-text-decoration: none;
-color: $text-reverse-color;
-transition: $time-transition $function-transition;
+  @include font(32px, calc(39 / 32), $fw: 700);
+  text-decoration: none;
+  color: $text-reverse-color;
+  transition: color $time-transition $function-transition;
 
-@include tablet {
-  @include font (48px, calc(59 / 48), $fw: 700);
-}
-}
+  &:hover,
+  &:focus {
+    color: $text-main-color;
+  }
 
-.menu-link:hover,
-.menu-link:focus {
-  color:$text-main-color;
-} 
+  @include tablet {
+    @include font(48px, calc(59 / 48), $fw: 700);
+  }
+}
 
 .menu-btn {
   min-width: 152px;
   height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 
-background: $main-color;
-border-radius: 10px;
-padding: 12px 36px;
+  background: $main-color;
+  border-radius: 10px;
+  padding: 12px 36px;
 
-font-family: 'Montserrat';
-@include font (14px, calc(17 / 14), $fw: 600);
-text-align: center;
-margin: auto;
+  @include font(14px, calc(17 / 14), $fw: 600);
+  text-align: center;
+  margin: auto;
 
-@include tablet {
-  display: none;
+  transition: color $time-transition $function-transition,
+    background-color $time-transition $function-transition,
+    fill $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    color: #ffffff;
+  }
+
+  &:focus.btn-arrow {
+    fill: #ffffff;
+  }
+
+  @include tablet {
+    display: none;
+  }
 }
-}
-
-.menu-btn::after {
-  content: "";
-  display: inline-flex;
-  justify-content: center;
-  background-image: url(../images/header/ep_arrow-right-bold.svg);
-  background-size: contain;
-width: 12px;
-height: 12px;
-margin-left: 4px;
-}
-
 // ___________________HERO_______________________________________________
 
 .hero-bgr {
@@ -238,34 +234,28 @@ margin-left: 4px;
 
 .hero-title {
   font-family: 'Seymour One';
-  @include font (26px, calc(33 / 26), $fw: 400);
+  @include font(26px, calc(33 / 26), $fw: 400);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $text-reverse-color;
   padding-top: 50px;
   margin-bottom: 32px;
-  // max-width: 247px;
-
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    min-width: 247px;
-    width: 100%;
-  }
 
   @include tablet {
     padding-top: 14px;
     margin-bottom: 24px;
     max-width: 247px;
   }
-   
+
   @include desktop {
-  @include font (38px, calc(48 / 38), $fw: 400);
-max-width: 367px;
-padding-top: 45px;
-margin-bottom: 28px;
-}
+    @include font(38px, calc(48 / 38), $fw: 400);
+    max-width: 367px;
+    padding-top: 45px;
+    margin-bottom: 28px;
+  }
 }
 
-.hero-wrap{
+.hero-wrap {
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -278,12 +268,17 @@ margin-bottom: 28px;
     flex-direction: column;
     margin-top: 28px;
   }
-}
-.hero-title-size {
-  @include font (34px, calc(33 / 34), $fw: 400);
 
   @include desktop {
-    @include font (38px, calc(48 / 38), $fw: 400);
+    margin-top: 53px;
+  }
+}
+
+.hero-title-size {
+  @include font(34px, calc(33 / 34), $fw: 400);
+
+  @include desktop {
+    @include font(38px, calc(48 / 38), $fw: 400);
   }
 }
 
@@ -292,18 +287,18 @@ margin-bottom: 28px;
 
   @include tablet {
     display: block;
-    @include font (28px, calc(34 / 28), $fw: 900);
-text-align: right;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: $text-main-color;
-margin: 0;
-margin-bottom: 4px;
-text-align: right;
+    @include font(28px, calc(34 / 28), $fw: 900);
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $text-main-color;
+    margin: 0;
+    margin-bottom: 4px;
+    text-align: right;
   }
-   
+
   @include desktop {
-    @include font (46px, calc(56 / 46), $fw: 900);
+    @include font(46px, calc(56 / 46), $fw: 900);
   }
 }
 
@@ -312,16 +307,16 @@ text-align: right;
 
   @include tablet {
     display: block;
-    @include font (8px, calc(10 / 8), $fw: 400);
-color: $text-reverse-color;
-margin: 0;
-margin-bottom: 20px;
-text-align: right;
-}
+    @include font(8px, calc(10 / 8), $fw: 400);
+    color: $text-reverse-color;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: right;
+  }
 
-@include desktop {
-  @include font (14px, calc(17 / 14), $fw: 400);
-}
+  @include desktop {
+    @include font(14px, calc(17 / 14), $fw: 400);
+  }
 }
 
 .hero-subject-margin {
@@ -330,32 +325,12 @@ text-align: right;
 
 // __________HERO BUTTON_______________________________
 
-.btn-products {
-  border: 2px solid $main-color;
-border-radius: 8px;
-background-color: transparent;
-padding: 11px 26px;
-min-width: 108px;
-
-font-family: 'Montserrat';
-@include font (12px, calc(15 / 12), $fw: 600);
-color: #000000;
-text-align: center;
-
-&:hover {
-  border: 2px solid $accent-color;
-}
-
-@include desktop {
-  
-}
-}
 .hero-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
   padding-bottom: 236px;
-  
+
   @include tablet {
     padding-bottom: 39px;
   }
@@ -365,22 +340,57 @@ text-align: center;
   }
 }
 
+.btn-products {
+  border: 2px solid $main-color;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 11px 26px;
+  min-width: 108px;
+  text-decoration: none;
+
+  @include font(12px, calc(15 / 12), $fw: 600);
+  color: #000000;
+  text-align: center;
+
+  transition: border $time-transition $function-transition,
+    color $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $accent-color;
+  }
+
+  &:focus {
+    @include desktop {
+      color: #ffffff;
+    }
+  }
+
+  &:disabled {
+    @include desktop {
+      border: 2px solid $disabled-color;
+    }
+  }
+}
+
 .btn-made {
   border: 2px solid transparent;
-  @include font (12px, calc(15 / 12), $fw: 600);
- text-decoration-line: underline;
-color: $main-color;
-background-color: transparent;
+  @include font(12px, calc(15 / 12), $fw: 600);
+  text-decoration-line: underline;
+  color: $main-color;
+  background-color: transparent;
 
-&:hover {
-  color: $accent-color;
-}
-&:focus {
-  color: $text-reverse-color;
-} 
-&:disabled {
-  color: $disabled-color;
-}
+  transition: color $time-transition $function-transition;
+
+  &:hover {
+    color: $accent-color;
+  }
+  &:focus {
+    color: $text-reverse-color;
+  }
+  &:disabled {
+    color: $disabled-color;
+  }
 }
 
 // ____________________HERO IMAGES__________________________
@@ -392,10 +402,11 @@ background-color: transparent;
 .picture-ice {
   position: absolute;
   display: none;
+  z-index: 3;
 
   @include tablet {
     display: block;
-  bottom: 12px;
+    bottom: 12px;
   }
 
   @include desktop {
@@ -408,87 +419,79 @@ background-color: transparent;
 
   @include tablet {
     display: inline-block;
-    @include font (12px, calc(17 / 12), $fw: 400);
+    @include font(12px, calc(17 / 12), $fw: 400);
     color: $text-reverse-color;
     max-width: 139px;
     margin: 0 0 0 184px;
     padding-bottom: 12px;
   }
-   @include desktop {
+  @include desktop {
     padding-bottom: 24px;
     max-width: 200px;
     margin: 0 0 0 241px;
-   }
+  }
 }
 
 .hero-icon {
-  
   @include tablet {
     padding-bottom: 24px;
   }
   @include desktop {
-  padding-bottom: 103px;
+    padding-bottom: 103px;
+  }
 }
-}
-
 
 .hero-arrow {
   display: none;
 
   @include tablet {
     display: block;
-  fill: $text-reverse-color;
-  margin: 0 0 0 184px;
-}
+    fill: $text-reverse-color;
+    margin: 0 0 0 184px;
+  }
 
-@include desktop {
-  margin: 0 0 0 241px;
-}}
+  @include desktop {
+    margin: 0 0 0 241px;
+  }
+}
 
 .hero-img-ice {
   position: absolute;
   bottom: 0;
-  min-width: 177px;
-  padding: 0 60px 0 83px;
-  top: -217px;
- 
-  @media screen and (min-width: 321px) and (max-width: 767px) {
-    // max-width: 268px;
+  left: 63px;
+  z-index: 2;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    min-width: 177px;
   }
 
   @include tablet {
-    width: 268px;
+    left: 376px;
   }
 
   @include desktop {
-    max-width: 456px;
+    left: 636px;
   }
 }
 
 .hero-img-dots {
   position: absolute;
   bottom: 0;
- 
- 
+  left: -20px;
+  z-index: 1;
 
-  @media screen and (min-width: 320px) and (max-width: 767px)
-  {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     min-width: 320px;
     width: 100%;
   }
 
-  @include tablet {
-  
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    left: -32px;
     min-width: 768px;
-    width: 100%;
-  }}
-
-  @include desktop {
-   
-  @media screen and (min-width: 1200px){
-    min-width: 1200px;
-    // width: 100%;
   }
-}
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+    left: -16px;
+  }
 }

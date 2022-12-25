@@ -24,7 +24,6 @@ button {
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
 
-  outline: 1px solid red;
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     padding-left: $tablet-padding;
