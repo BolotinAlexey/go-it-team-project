@@ -7,18 +7,48 @@
         padding: 32px 60px;
     }
 }
-.modal_text {
-    font-family: 'Seymour One';
-    color: $text-main-color;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+.modal__title {
     text-align: center;
+    font-family: 'Seymour One';
 
-    @media screen and (min-width: 767px){
-        font-size: 20px;
-        line-height: 28px;
+    @include font(16px, 1.5);
+
+    @include tablet() {
+        @include font(20px, 1.4);
+    }
+}
+.button-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    display: block;
+
+    color: $text-main-color;
+    background: transparent;
+    @extend %flex-center;
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    @include tablet() {
+        width: 24px;
+        height: 24px;
+    }
+}
+.icon-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    fill: currentColor;
+
+    @include tablet() {
+        width: 24px;
+        height: 24px;
     }
 }
 .modal_window {
@@ -49,23 +79,26 @@
     }
 }
 .modal_button {
-    margin-top: 24px;
     margin-left: auto;
     margin-right: auto;
-    color: $text-main-color;
+    margin-top: 24px;
     padding: 12px 34px;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background:$main-color;
     border-radius: 10px;
+    border: none;
+    background:$main-color;
+    color: $text-main-color;
+    $function-transition: cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 767px){
         font-size: 14px;
         line-height: 17px;
+    }
+    &:hover,
+    &:focus {
+    $accent-color: #0a8817;
     }
 }
