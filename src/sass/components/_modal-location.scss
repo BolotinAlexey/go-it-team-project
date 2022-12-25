@@ -1,29 +1,10 @@
 .modal-location { 
     max-width: 280px;
+    padding: 28px;
 
     @media screen and (min-width: 767px){
         max-width: 568px;
         padding: 32px 60px;
-    }
-}
-.container{
-    padding: 28px;
-    width: 100%;
-}
-.modal__close-button {
-    margin-top: 16px;
-    margin-right: 16px;
-    margin-left: auto;
-    display: block;
-    background-color: #fff;
-}
-.modal-icon {
-    width: 11px;
-    height: 11px;
-
-    @media screen and (min-width: 767px){
-        width: 13px;
-        height: 13px;
     }
 }
 .modal_text {
