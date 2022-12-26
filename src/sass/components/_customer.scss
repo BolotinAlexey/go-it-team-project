@@ -1,21 +1,23 @@
 // ---------Customer----------
 
-.container-customer {
+.customer {
   padding-top: 178px;
   padding-bottom: 393px;
-  max-width: 100%;
-  background-image: url(../images/backgrounds/bg-mobile.jpg);
+  // max-width: 100%;
+  // background-image: url(../images/backgrounds/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include mobile() {
-    background-image: url(../images/backgrounds/bg-tablet.jpg);
-  }
+  // @include mobile() {
+  //   background-image: url(../images/backgrounds/bg-tablet.jpg);
+  // }
 
   @include tablet() {
     padding-top: 283px;
     padding-bottom: 379px;
-    background-image: url(../images/backgrounds/bg-desktop.jpg);
+    // background-image: url(../images/backgrounds/bg-desktop.jpg);
   }
 
   @include desktop() {
@@ -24,8 +26,32 @@
   }
 }
 
+// .customer__container {
+//   z-index: 100;
+// }
+.customer-bg {
+  position: relative;
+}
+.customer-bg__item {
+  position: absolute;
+  width: 158.77px;
+  height: 281.03px;
+  z-index: -10;
+}
+.customer-bg__item:nth-of-type(1) {
+  background-image: url(../images/bg-frames/frame11.png);
+  left: 364px;
+  top: 0px;
+}
+
+.customer__container {
+  @include desktop() {
+    width: 968px;
+  }
+}
+
 // Slides
-.customer {
+.customer__wrap {
   overflow: hidden;
 }
 .customer__slides {
@@ -50,9 +76,11 @@
   object-fit: cover;
 }
 .customer__describe {
+  width: 100%;
   height: 100%;
   padding: 35px 39px;
   text-align: center;
+  @extend %flex-center;
 
   background-color: $bgcolor-main;
   border-radius: 10px;
@@ -76,6 +104,10 @@
   border-radius: 50%;
   background-color: $bgcolor-slider-btn;
   &:active {
-    background-color: $bgcolor-main;
+    transform: scale(1.3);
   }
+}
+
+.current-button {
+  background-color: $bgcolor-main;
 }

@@ -1,15 +1,79 @@
 // ---------Gallery----------
 
 .gallery {
-  position: relative;
-  top: -32px;
+  background-color: $bgcolor-main;
+  height: 32px;
   @include tablet() {
-    top: -98px;
+    height: 98px;
+  }
+}
+gallery__wrap {
+}
+.gallery__set {
+  position: relative;
+}
+.gallery__item {
+  width: 100%;
+  position: absolute;
+
+  animation-name: vision;
+  animation-timing-function: ease-in-out;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.gallery__img {
+  margin: 0 auto;
+  display: block;
+
+  border-radius: 8px;
+
+  @include tablet() {
+    border-radius: 25px;
+  }
+  @include desktop() {
+    max-width: 1013px;
   }
 }
 
-.gallery__set {
+@keyframes vision {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.gallery__item {
-  position: absolute;
+
+// For "n" images You must define:4
+// a=presentation time for one image
+// b=duration for cross fading 4
+// Total animation-duration is of course t=(a+b)*n=24
+
+// animation-delay = t/n or = a+b 8
+
+// Percentage for keyframes:
+
+// 0%
+// a/t*100% 4/24
+// (a+b)/t*100% = 8/24*100%
+// 100%-(b/t*100%)  = 1- 4/24
+// 100%
+
+.gallery__item:nth-of-type(3) {
+  animation-delay: 0s;
+}
+.gallery__item:nth-of-type(2) {
+  animation-delay: 4s;
+}
+.gallery__item:nth-of-type(1) {
+  animation-delay: 8s;
 }
