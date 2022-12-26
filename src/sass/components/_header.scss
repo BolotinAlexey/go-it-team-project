@@ -44,11 +44,13 @@
   color: $text-reverse-color;
   padding: 32px 0 13px;
   transition: color $time-transition $function-transition;
+  cursor: url(./../images/header/header-cursor.png) 19 24, auto;
 
   &:hover,
   &:focus,
   &:active {
     color: $main-color;
+    cursor: url(./../images/header/header-cursor.png) 19 24, auto;
   }
 }
 
