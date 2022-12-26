@@ -58,7 +58,21 @@ gallery__wrap {
 // b=duration for cross fading 4
 // Total animation-duration is of course t=(a+b)*n=24
 
+// <<<<<<< HEAD
 // animation-delay = t/n or = a+b 8
+// =======
+.gallery__foto {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.gallery__describe {
+  padding: 35px 39px;
+  height: 100%;
+  text-align: center;
+}
+// >>>>>>> main
 
 // Percentage for keyframes:
 

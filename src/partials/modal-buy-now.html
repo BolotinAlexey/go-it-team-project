@@ -1,0 +1,94 @@
+<div class="modal-buy-now modal" data-modal="buy">
+  <button
+    type="button"
+    class="button-close modal-buy-now__btn-close js-modal-close"
+  >
+    <svg class="modal-buy-now__btn-close-icon">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+  </button>
+  <h1 class="modal-buy-now__title">Buy now</h1>
+
+  <form class="buy-now-form" autocomplete="off">
+    <div class="buy-now-product" role="group">
+      <div class="buy-now-product__item">
+        <input
+          type="checkbox"
+          name="buy-now-product"
+          value="ice-cream"
+          class="buy-now-product__item-input buy-now-product__item-input--green"
+          id="buy-now-product-ice-cream"
+        />
+        <label
+          class="buy-now-product__item-label buy-now-product__item--green"
+          for="buy-now-product-ice-cream"
+        >
+          Ice cream
+        </label>
+      </div>
+
+      <div class="buy-now-product__item">
+        <input
+          type="checkbox"
+          name="buy-now-product"
+          value="ice-coffee"
+          class="buy-now-product__item-input buy-now-product__item-input--yellow"
+          id="buy-now-product-ice-coffee"
+        />
+
+        <label
+          class="buy-now-product__item-label buy-now-product__item--yellow"
+          for="buy-now-product-ice-coffee"
+        >
+          Ice coffee
+        </label>
+      </div>
+
+      <div class="buy-now-product__item">
+        <input
+          type="checkbox"
+          name="buy-now-product"
+          value="milkshake"
+          class="buy-now-product__item-input buy-now-product__item-input--brown"
+          id="buy-now-product-milkshake"
+        />
+
+        <label
+          class="buy-now-product__item-label buy-now-product__item--brown"
+          for="buy-now-product-milkshake"
+        >
+          Milkshake
+        </label>
+      </div>
+    </div>
+
+    <fieldset class="contacts-field">
+      <input
+        type="text"
+        name="username"
+        pattern="^[a-zA-Zа-яА-Я]+\s[a-zA-Zа-яА-Я]+$"
+        title="First Name and Last Name"
+        autofocus
+        required
+        placeholder="Name"
+        class="contacts-field__input"
+      />
+      <input
+        type="tel"
+        name="userphone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        title="0xx-xxx-xx-xx"
+        required
+        placeholder="Phone"
+        class="contacts-field__input"
+      />
+      <textarea
+        name="usercomments"
+        class="contacts-field__user-comments"
+        placeholder="Comment"
+      ></textarea>
+    </fieldset>
+
+    <button type="submit" class="modal-buy-now-submit">Submit</button>
+  </form>
+</div>
