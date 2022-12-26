@@ -20,7 +20,10 @@
 
     @include tablet() {
         margin-bottom: 24px;
-        
+        width: 322px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
       }
 
 }
