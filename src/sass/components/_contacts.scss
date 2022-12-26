@@ -1,53 +1,57 @@
 .contacts {
     background: #84A178;
-    min-height: 1095px;
-    padding-bottom: 60px;
+    min-height: 935px;
     position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
     @include tablet {
-        min-height: 360px;
-        padding-bottom: 40px;
-    }
+        min-height: 278px;
+      }
     @include desktop {
-        min-height: 636px;
-        padding-bottom: 120px;
+        min-height: 474px;
     }
 }
 .contacts-position {
 position: absolute;
-top: -355px;
-// margin: 0 auto;
+bottom: 20px;
+min-width: 280px;
 @include tablet {
-    top: -300px;
-    left: 32px;
-    width: 704px;
-    
+    bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 @include desktop {
-    top: -128px;
-    left: 16px;
-    width: 1168px;
+    bottom: 60px;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
 }
 .contacts-thumb {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     margin-bottom: 20px;
    
     @media screen and (max-width:767px) {
     flex-wrap: wrap;
     flex-direction: column;
-    max-width: 280px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     }
     @include tablet {
-    margin-bottom: 40px;
+    marging-bottom: 40px;
     justify-content: space-between;
+
     }
     @include desktop {
     gap: 32px;
     justify-content: space-between;
-    margin-bottom: 60px;
+    marging-bottom: 60px;
     }
 }
 .contacts__adress {
@@ -56,16 +60,19 @@ top: -355px;
     padding-right: 32px;
     padding-bottom: 24px;
     width: 100%;
-    min-height: 412px;
+    margin: 0 auto;
+    height: 412px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     background: #FCFCFC;
     @include tablet {
     width: calc((100% - 32px) / 3);
+    min-height: 537px;
     }
     @include desktop {
             width: calc((100% - 64px) / 3);
-            justify-content: center ;
+            justify-content: center;
+            min-height: 542px;
         }
 }
 
@@ -172,55 +179,55 @@ flex-direction: column;
     justify-content: center;
 }
 }
-.contacts__btn {
-    display: block;
-    width: 196px;
-    height: 42px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.28;
-    @media screen and (max-width:767px) {
-    margin: 0 auto;
-    }
+// .contacts__btn {
+//     display: block;
+//     width: 196px;
+//     height: 42px;
+//     font-weight: 600;
+//     font-size: 14px;
+//     line-height: 1.28;
+//     @media screen and (max-width:767px) {
+//     margin: 0 auto;
+//     }
 
-}
+// }
 
-.contacts__locations {
-background: #F8D24E;
-border-radius: 10px;
-transition: background $time-transition $function-transition, 
-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-     &:hover {
-    background: $accent-color;
-}
-        &:focus {
-            background: $accent-color;
-            color: #ffffff;
-        }
-        &:focus .btn_location {
-fill:#ffffff
-        }
-}
-.btn_location {
-    fill: inherit;
-    margin-left: 4px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+// .contacts__locations {
+// background: #F8D24E;
+// border-radius: 10px;
+// transition: background $time-transition $function-transition, 
+// color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//      &:hover {
+//     background: $accent-color;
+// }
+//         &:focus {
+//             background: $accent-color;
+//             color: #ffffff;
+//         }
+//         &:focus .btn_location {
+// fill:#ffffff
+//         }
+// }
+// .btn_location {
+//     fill: inherit;
+//     margin-left: 4px;
+//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
-.contacts__franchise {
-    border: 2px solid #F8D24E;
-    border-radius: 10px;
-    background-color: transparent;
-    transition: border-color $time-transition $function-transition;
-    &:hover {
-        border-color: $accent-color;
-    }
-    &:focus {
-    border-color: $accent-color;
-    color: #ffffff;
+// .contacts__franchise {
+//     border: 2px solid #F8D24E;
+//     border-radius: 10px;
+//     background-color: transparent;
+//     transition: border-color $time-transition $function-transition;
+//     &:hover {
+//         border-color: $accent-color;
+//     }
+//     &:focus {
+//     border-color: $accent-color;
+//     color: #ffffff;
     
-    }
-        &:focus .btn_location {
-            fill: #ffffff
-        }
-}
+//     }
+//         &:focus .btn_location {
+//             fill: #ffffff
+//         }
+// }
