@@ -3,21 +3,19 @@
 .customer {
   padding-top: 178px;
   padding-bottom: 393px;
-  // max-width: 100%;
-  // background-image: url(../images/backgrounds/bg-mobile.jpg);
+  max-width: 100%;
+  background-image: url(../images/backgrounds/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
   margin-right: auto;
 
-  // @include mobile() {
-  //   background-image: url(../images/backgrounds/bg-tablet.jpg);
-  // }
+  background-image: url(../images/backgrounds/bg-tablet.jpg);
 
   @include tablet() {
     padding-top: 283px;
     padding-bottom: 379px;
-    // background-image: url(../images/backgrounds/bg-desktop.jpg);
+    background-image: url(../images/backgrounds/bg-desktop.jpg);
   }
 
   @include desktop() {
@@ -29,20 +27,6 @@
 // .customer__container {
 //   z-index: 100;
 // }
-.customer-bg {
-  position: relative;
-}
-.customer-bg__item {
-  position: absolute;
-  width: 158.77px;
-  height: 281.03px;
-  z-index: -10;
-}
-.customer-bg__item:nth-of-type(1) {
-  background-image: url(../images/bg-frames/frame11.png);
-  left: 364px;
-  top: 0px;
-}
 
 .customer__container {
   @include desktop() {
@@ -111,3 +95,100 @@
 .current-button {
   background-color: $bgcolor-main;
 }
+
+// .customer-bg__item:nth-of-type(1) {
+//   background-image: url(../images/bg-frames/frame3.png);
+//   width: 227.93px;
+//   height: 324px;
+//   left: 13px;
+//   top: 118px;
+// }
+
+// .customer-bg__item:nth-of-type(2) {
+//   background-image: url(../images/bg-frames/frame3.png);
+//   width: 209.44px;
+//   height: 297.72px;
+//   left: 917px;
+//   top: 322.62px;
+
+//   transform: rotate(-66.88deg);
+// }
+// .customer-bg__item:nth-of-type(3) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(4) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(5) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(6) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(7) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(8) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(9) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+
+// .customer-bg__item:nth-of-type(10) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(11) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(12) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(13) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+// .customer-bg__item:nth-of-type(14) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+
+// .customer-bg__item:nth-of-type(15) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+
+// .customer-bg__item:nth-of-type(16) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
+
+// .customer-bg__item:nth-of-type(17) {
+//   background-image: url(../images/bg-frames/frame1.png);
+//   left: 364px;
+//   top: 0px;
+// }
