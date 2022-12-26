@@ -2,6 +2,16 @@
   background: #84a178;
 }
 
+.container-about {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 1200px){
+      padding-left: 18px;
+      padding-right: 18px;
+  }
+}
+
 .about-page {
   font-family: 'Montserrat';
   font-weight: 700;
@@ -35,6 +45,8 @@
   }
 }
 
+
+
 .about-title {
   font-family: 'Seymour One';
   font-weight: 400;
@@ -44,7 +56,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fcfcfc;
-  margin-bottom: 372px;
+  margin-bottom: 32px;
 
   @include tablet() {
     font-family: 'Seymour One';
@@ -70,6 +82,91 @@
     margin-bottom: 172px;
   }
 }
+
+
+.about-cow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+  flex-direction: column;  
+  }
+      
+
+  @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+      
+      
+  }
+
+}
+
+
+.about__cow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; 
+  width: 278px;
+  height: 278px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(248,210,78,.7), rgba(248,210,78,.7)), #D9D9D9;
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+
+  @media screen and (min-width: 768px) {
+      margin-right: 32px;
+      width: 330px;
+      height: 330px;
+      
+      
+  }
+  @media screen and (min-width: 1200px) {
+      margin-right: 100px;
+      width: 500px;
+      height: 500px;
+      
+  }
+}  
+
+.about-cow__picture {
+  transform: translateY(22px);
+
+    @media screen and (min-width: 768px) {
+        transform: translateY(26px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        transform: translateY(39px);
+    }
+}
+
+.about__cow-image {
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  border-radius: 50%; 
+
+  @media screen and (min-width: 768px) {
+  width: 330px;
+  max-width: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+  width: 490px;
+  }
+}
+
+.about-text {
+  padding-bottom: 50px;
+
+  @include tablet() {
+    flex-direction: row;
+  }
+
+  @include desktop() {
+    flex-direction: column;
+  }
+}
+
+
 
 .about-paragraph {
   font-family: 'Montserrat';
@@ -120,14 +217,4 @@
   }
 }
 
-.about-text {
-  padding-bottom: 50px;
 
-  @include tablet() {
-    flex-direction: row;
-  }
-
-  @include desktop() {
-    flex-direction: column;
-  }
-}
