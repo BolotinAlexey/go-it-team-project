@@ -1,381 +1,390 @@
 .products {
-    background-image: url(../images/products/bg-mob\ 1x.jpg);
-    margin: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background-image: url(../images/backgrounds/bg-mob\ 1x.jpg);
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include retina {
+    background-image: url(../images/backgrounds/bg-mob\ 2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/backgrounds/bg-tab\ 1x.jpg);
 
     @include retina {
-        background-image: url(../images/products/bg-mob\ 2x.jpg);
+      background-image: url(../images/backgrounds/bg-tab\ 2x.jpg);
     }
+  }
 
-    @include tablet {
-        background-image: url(../images/products/bg-tab\ 1x.jpg);
+  @include desktop {
+    background-image: url(../images/backgrounds/bg-desk\ 1x.jpg);
 
-        @include retina {
-            background-image: url(../images/products/bg-tab\ 2x.jpg);
-        }
+    @include retina {
+      background-image: url(../images/backgrounds/bg-desk\ 2x.jpg);
     }
-
-    @include desktop {
-        background-image: url(../images/products/bg-desk\ 1x.jpg);
-
-        @include retina {
-            background-image: url(../images/products/bg-desk\ 2x.jpg);
-        }
-    }
+  }
 }
 
 .container {
-    min-width: 280px;
+  min-width: 280px;
 }
 
 .label {
-    display: flex;
-    justify-content: center;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .top-label {
-    @include font (18px, 1.222, 800);
-    font-style: normal;
-    text-transform: uppercase;
-    color: $text-main-color;
-    margin-bottom: 12px;
+  @include font(18px, 1.222, 800);
+  font-style: normal;
+  text-transform: uppercase;
+  color: $text-main-color;
+  margin-bottom: 12px;
 
-    @include tablet {
-        @include font (22px, 1.227, 800);
-    }
+  @include tablet {
+    @include font(22px, 1.227, 800);
+  }
 
-    @include desktop {
-        @include font (30px, 1.233, 800);
-    }
+  @include desktop {
+    @include font(30px, 1.233, 800);
+  }
 }
 
 .products-name {
-    font-family: 'Seymour One';
-    @include font (30px, 1.266);
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $text-main-color;
-    margin-bottom: 148px;
+  font-family: 'Seymour One';
+  @include font(30px, 1.266);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-main-color;
+  margin-bottom: 148px;
 
-    @include tablet {
-        margin-bottom: 200px;
-        @include font (34px, 1.264);
-    }
+  @include tablet {
+    margin-bottom: 200px;
+    @include font(34px, 1.264);
+  }
 
-    @include desktop {
-        @include font (36px, 1.25);
-        margin-bottom: 300px;
-    }
+  @include desktop {
+    @include font(36px, 1.25);
+    margin-bottom: 300px;
+  }
 }
 
-
 .product-list {
-    display: flex;
-    flex-direction: column;
-    gap: 168px;
+  display: flex;
+  flex-direction: column;
+  gap: 168px;
 
-    @include tablet {
-        flex-direction: row;
-        gap: 16px;
-        justify-content: center;
-    }
+  @include tablet {
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+  }
 
-    @include desktop {
-        gap: 29px;
-    }
+  @include desktop {
+    gap: 29px;
+  }
 }
 
 .product-list__card {
-    width: 100%;
-    height: 420px;
-    background-color: $bgcolor-first-ice;
-    border-radius: 24px;
-    position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: $bgcolor-first-ice;
+  border-radius: 24px;
+  position: relative;
 
-    @include tablet {
-        width: 224px;
-    }
+  @include tablet {
+    width: 224px;
+  }
 
-    @include desktop {
-        width: 370px;
-        height: 536px;
-    }
-
+  @include desktop {
+    width: 370px;
+    height: 536px;
+  }
 }
 
 .product-list__card::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -108px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(../images/products/ice-cream-mob\ 1x.jpg);
-    background-position: center;
-    background-size: contain;
-    z-index: 10;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -108px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../images/products/ice-cream-mob\ 1x.jpg);
+  background-position: center;
+  background-size: contain;
+  z-index: 10;
+
+  @include retina {
+    background-image: url(../images/products/ice-cream-mob\ 2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/products/ice-cream-tab\ 1x.jpg);
 
     @include retina {
-        background-image: url(../images/products/ice-cream-mob\ 2x.jpg);
+      background-image: url(../images/products/ice-cream-tab\ 2x.jpg);
     }
+  }
 
-    @include tablet {
-        background-image: url(../images/products/ice-cream-tab\ 1x.jpg);
+  @include desktop {
+    background-image: url(../images/products/ice-cream-desc\ 1x.jpg);
+    width: 302px;
+    height: 302px;
+    top: -183px;
 
-        @include retina {
-            background-image: url(../images/products/ice-cream-tab\ 2x.jpg);
-        }
+    @include retina {
+      background-image: url(../images/products/ice-cream-desc\ 2x.jpg);
     }
-
-    @include desktop {
-        background-image: url(../images/products/ice-cream-desc\ 1x.jpg);
-        width: 302px;
-        height: 302px;
-        top: -183px;
-
-        @include retina {
-            background-image: url(../images/products/ice-cream-desc\ 2x.jpg);
-        }
-    }
+  }
 }
 
 .product-list__bg {
-    height: 211px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-    position: absolute;
-    top: -108px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  height: 211px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 
-    @include desktop {
-        width: 302px;
-        height: 302px;
-        top: -167px;
-    }
+  @include desktop {
+    width: 302px;
+    height: 302px;
+    top: -167px;
+  }
 }
 
 .product-list__name {
-    @include font (20px, 1.2, 700);
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $text-main-color;
+  @include font(20px, 1.2, 700);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-main-color;
 
-    padding-top: 120px;
-    margin-bottom: 40px;
+  padding-top: 120px;
+  margin-bottom: 40px;
 
-    @include tablet {
-        @include font (22px, 1.227, 700);
-    }
+  @include tablet {
+    @include font(22px, 1.227, 700);
+  }
 
-    @include desktop {
-        @include font (30px, 1.233, 700);
-        margin-bottom: 66px;
-        padding-top: 165px;
-    }
+  @include desktop {
+    @include font(30px, 1.233, 700);
+    margin-bottom: 66px;
+    padding-top: 165px;
+  }
 }
 
 .product-list__text {
-    @include font (14px, 1.76);
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: $text-main-color;
-    margin: 0;
-    padding-right: 40px;
-    padding-left: 40px;
+  @include font(14px, 1.76);
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $text-main-color;
+  margin: 0;
+  padding-right: 40px;
+  padding-left: 40px;
 
-    @include tablet {
-        padding-left: 26px;
-        padding-right: 26px;
-    }
+  @include tablet {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 
-    @include desktop {
-        font-size: 16px;
-        padding-left: 62px;
-        padding-right: 62px;
-    }
+  @include desktop {
+    font-size: 16px;
+    padding-left: 62px;
+    padding-right: 62px;
+  }
 }
 
 .button-product {
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    fill: $text-main-color;
-    background-color: transparent;
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  fill: $text-main-color;
+  background-color: transparent;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
 
-    @include tablet {
-        bottom: 12px;
-    }
+  @include tablet {
+    bottom: 12px;
+  }
 
-    @include desktop {
-        bottom: 60px;
-    }
-
+  @include desktop {
+    bottom: 60px;
+  }
 }
 
 .product-list__card-coffe {
-    width: 100%;
-    height: 420px;
-    background-color: $bgcolor-second-ice;
-    border-radius: 24px;
-    position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: $bgcolor-second-ice;
+  border-radius: 24px;
+  position: relative;
 
-    @include tablet {
-        width: 224px;
-    }
+  @include tablet {
+    width: 224px;
+  }
 
-    @include desktop {
-        width: 370px;
-        height: 536px;
-    }
-
+  @include desktop {
+    width: 370px;
+    height: 536px;
+  }
 }
 
 .product-list__card-coffe::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -108px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(../images/products/ice-coffe-mob\ 1x.jpg);
-    background-position: center;
-    background-size: contain;
-    z-index: 10;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -108px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../images/products/ice-coffe-mob\ 1x.jpg);
+  background-position: center;
+  background-size: contain;
+  z-index: 10;
+
+  @include retina {
+    background-image: url(../images/products/ice-coffe-mob\ 2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/products/ice-coffe-tab\ 1x.jpg);
 
     @include retina {
-        background-image: url(../images/products/ice-coffe-mob\ 2x.jpg);
+      background-image: url(../images/products/ice-coffe-tab\ 2x.jpg);
     }
+  }
 
-    @include tablet {
-        background-image: url(../images/products/ice-coffe-tab\ 1x.jpg);
+  @include desktop {
+    background-image: url(../images/products/ice-coffe-desc\ 1x.jpg);
+    width: 302px;
+    height: 302px;
+    top: -183px;
 
-        @include retina {
-            background-image: url(../images/products/ice-coffe-tab\ 2x.jpg);
-        }
+    @include retina {
+      background-image: url(../images/products/ice-coffe-desc\ 2x.jpg);
     }
-
-    @include desktop {
-        background-image: url(../images/products/ice-coffe-desc\ 1x.jpg);
-        width: 302px;
-        height: 302px;
-        top: -183px;
-
-        @include retina {
-            background-image: url(../images/products/ice-coffe-desc\ 2x.jpg);
-        }
-    }
+  }
 }
 
 .product-list__bg-coffe {
-    height: 211px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)),
-        #D9D9D9;
-    position: absolute;
-    top: -108px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  height: 211px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
 
-    @include desktop {
-        width: 302px;
-        height: 302px;
-        top: -167px;
-    }
+  @include desktop {
+    width: 302px;
+    height: 302px;
+    top: -167px;
+  }
 }
 
 .product-list__card-milk {
-    width: 100%;
-    height: 420px;
-    background-color: $bgcolor-third-ice;
-    border-radius: 24px;
-    position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: $bgcolor-third-ice;
+  border-radius: 24px;
+  position: relative;
 
-    @include tablet {
-        width: 224px;
-    }
+  @include tablet {
+    width: 224px;
+  }
 
-    @include desktop {
-        width: 370px;
-        height: 536px;
-    }
+  @include desktop {
+    width: 370px;
+    height: 536px;
+  }
 }
 
 .product-list__card-milk::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -108px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(../images/products/milk-mob\ 1x.jpg);
-    background-position: center;
-    background-size: contain;
-    z-index: 10;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -108px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../images/products/milk-mob\ 1x.jpg);
+  background-position: center;
+  background-size: contain;
+  z-index: 10;
+
+  @include retina {
+    background-image: url(../images/products/milk-mob\ 2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/products/milk-tab\ 1x.jpg);
 
     @include retina {
-        background-image: url(../images/products/milk-mob\ 2x.jpg);
+      background-image: url(../images/products/milk-tab\ 2x.jpg);
     }
+  }
 
-    @include tablet {
-        background-image: url(../images/products/milk-tab\ 1x.jpg);
+  @include desktop {
+    background-image: url(../images/products/milk-desc\ 1x.jpg);
+    width: 302px;
+    height: 302px;
+    top: -183px;
 
-        @include retina {
-            background-image: url(../images/products/milk-tab\ 2x.jpg);
-        }
+    @include retina {
+      background-image: url(../images/products/milk-desc\ 2x.jpg);
     }
-
-    @include desktop {
-        background-image: url(../images/products/milk-desc\ 1x.jpg);
-        width: 302px;
-        height: 302px;
-        top: -183px;
-
-        @include retina {
-            background-image: url(../images/products/milk-desc\ 2x.jpg);
-        }
-    }
+  }
 }
 
 .product-list__bg-milk {
-    height: 211px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)),
-        #D9D9D9;
-    position: absolute;
-    top: -108px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  height: 211px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
 
-    @include desktop {
-        width: 302px;
-        height: 302px;
-        top: -167px;
-    }
+  @include desktop {
+    width: 302px;
+    height: 302px;
+    top: -167px;
+  }
 }
