@@ -4,7 +4,7 @@ p {
 .container {
   position: relative;
 }
-footer {
+.footer {
   background-color: $bgcolor-main;
   padding-top: 20px;
   @media screen and (min-width: 768px) {
@@ -14,7 +14,7 @@ footer {
     padding-top: 60px;
   }
 }
-.button-footer-list {
+.footer__button-list {
   @media screen and (min-width: 768px) {
     display: flex;
     gap: 16px;
@@ -33,8 +33,9 @@ footer {
   text-align: center;
   color: $text-main-color;
   border-radius: 10px;
-  transition: background-color 250ms linear, color 250ms linear,
-    border-color 250ms linear;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition,
+    border-color $time-transition $function-transition;
 }
 .button-location {
   background-color: $main-color;
@@ -75,12 +76,12 @@ footer {
   @media screen and (min-width: 768px) {
     gap: 30px;
   }
-  .item {
+  .msg-list__item {
     a {
       &:hover .msg-icon,
       &:focus .msg-icon,
       &:active .msg-icon {
-        fill: #fcfcfc;
+        fill: $text-reverse-color;
       }
     }
   }
@@ -99,10 +100,10 @@ footer {
   }
   .msg-icon {
     fill: $bgcolor-main;
-    transition: fill 250ms linear;
+    transition: fill $time-transition $function-transition;
   }
 }
-.footer-flex {
+.footer__flex {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -112,7 +113,7 @@ footer {
     margin-bottom: 60px;
   }
 }
-.footer-text-wrap {
+.footer__flex-text {
   margin-top: 60px;
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
@@ -126,7 +127,7 @@ footer {
   }
 }
 .text-footer {
-  color: #fcfcfc;
+  color: $text-reverse-color;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -181,7 +182,7 @@ footer {
   }
   a {
     text-decoration: none;
-    color: #fcfcfc;
+    color: $text-reverse-color;
     &:hover,
     &:focus {
       color: $accent-color;
@@ -230,7 +231,7 @@ footer {
     }
   }
 }
-.flex-wrap {
+.footer__flex-wrap {
   //   margin-right: 20px;
   display: flex;
   flex-direction: column;
