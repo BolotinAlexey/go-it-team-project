@@ -4,6 +4,7 @@
     closeMenuBtn: document.querySelector('[data-menu-close]'),
     menu: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
+   
   
   };
 
@@ -20,4 +21,5 @@
     refs.menu.classList.add('is-hidden');
     refs.body.classList.remove('no-scroll');
   }
+  
 })();
