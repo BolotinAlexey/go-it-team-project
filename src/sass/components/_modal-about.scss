@@ -1,170 +1,223 @@
 .modal-about {
-    padding: 28px 20px;
-    @media screen and (min-width: 768px) {
-        padding: 32px 40px; 
-    }
-     
-}
+  padding: 28px 20px;
 
-.about-btn {
-    display: block;
+  @include tablet() {
+    padding: 32px 40px;
+  }
 }
 
 .modal-about__title {
-    margin-bottom: 24px;
+  width: 142px;
+  margin: 0 auto 24px;
 
-    text-align: center;
-    font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
+  @include tablet() {
+    width: 100%;
+  }
 }
 
 .img-wrap {
-    margin: 0 auto 24px auto;
+  margin: 0 auto 24px;
 
-    width: 132px;
-    height: 139px;
-    border-radius: 50%;
-    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  width: 132px;
+  height: 139px;
+  border-radius: 50%;
+  
+}
+
+.icecream-wrap {
+  background: linear-gradient(
+      0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
 }
 
+.icecofee-wrap {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #D9D9D9;
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+}
+
+.milkshake-wrap {
+  background: linear-gradient(
+      0deg,
+       rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+    ),
+    #D9D9D9;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+}
+
 .specifications-list {
-    display: flex;
-    justify-content: center;
-    gap: 9px;
-    
-    margin-bottom: 48px;
-    @media screen and (min-width: 768px) {
-        gap: 20px;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+
+  margin-bottom: 48px;
+  @include tablet() {
+    gap: 20px;
+  }
 }
 
 .specifications-list__item {
+  width: 57px;
+  height: 72px;
+  border-radius: 40px;
+  
+  text-align: center;
+
+  @include tablet() {
     width: 65px;
     height: 90px;
-    border-radius: 40px;
-    border: 2px solid #9CBE8F;
-    text-align: center;
+  }
 }
 
 .specification-list__quantity {
-    display: inline-flex;
-    margin-bottom: 6px;
-    justify-content: center;
-    align-items: center;
-    background-color: #9CBE8F;
+  display: inline-flex;
+  margin-bottom: 8px;
+  justify-content: center;
+  align-items: center;
+  
+
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  
+
+  @include font(10px, 2.8, 500);
+
+  @include tablet() {
     width: 53px;
     height: 53px;
-    border-radius: 50%;
-    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
 
-    font-weight: 500;
     font-size: 12px;
     line-height: 2.33;
+  }
+}
+
+
+.border-icecream {
+  border: 2px solid $bgcolor-modal-icecream;
+}
+
+.bg-icecream {
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  background-color: $bgcolor-modal-icecream;
+}
+
+.border-icecoffee {
+  border: 2px solid $bgcolor-second-ice;
+}
+
+.bg-icecoffee {
+  box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+  background-color: $bgcolor-second-ice;
+}
+
+.border-milkshake {
+  border: 2px solid $bgcolor-third-ice;
+}
+
+.bg-milkshake {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  background-color: $bgcolor-third-ice;
 }
 
 .specification-list__descr {
-    font-weight: 400;
+  @include font(10px, 1.25);
+
+  @include tablet() {
     font-size: 12px;
-    line-height: 1.25;
+  }
 }
 
 .modal-about__subtitle {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 
-    text-align: center;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.4;
+  text-align: center;
+  @include font(20px, 1.4, 500);
 }
 
 .ingredients-list {
-    margin-bottom: 48px;
+  margin-bottom: 48px;
 }
 
 .ingredients-list__item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 11px;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .ingredients-list__product {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.78;
+  @include font(14px, 1.78);
 }
 
 .ingredients-list__quantity {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.78;
+  @include font(14px, 1.78);
 }
 
 .modal-about__form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .modal-about__input {
-    padding: 11px 16px;
+  padding: 11px 16px;
 
-    width: 368px;
-    height: 42px;
-    border-radius: 10px;
-    border: 1px solid rgba(132, 161, 120, 1);
-    background-color: #FCF8EB;
+  width: 368px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(132, 161, 120, 1);
+  background-color: #fcf8eb;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.43;
+  @include font(14px, 1.43);
 }
 
 .modal-about__textarea {
-    padding: 11px 16px;
+  padding: 11px 16px;
 
-    width: 368px;
-    height: 84px;
-    border-radius: 10px;
-    border: 1px solid rgba(132, 161, 120, 1);
-    background-color: #FCF8EB;
-    resize: none;
+  width: 368px;
+  height: 84px;
+  border-radius: 10px;
+  border: 1px solid rgba(132, 161, 120, 1);
+  background-color: #fcf8eb;
+  resize: none;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.43;
+  @include font(14px, 1.43);
 }
 
 .modal-about__submit {
-    display: block;
-    margin: auto;
-    padding: 12px 34px;
-    border-radius: 10px;
-    background-color: $main-color;
+  display: block;
+  margin: auto;
+  padding: 12px 34px;
+  border-radius: 10px;
+  background-color: $main-color;
 
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.21;
+  @include font(14px, 1.21, 600);
 
-    transition: background-color $time-transition $function-transition,
-        color $time-transition $function-transition;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition;
 
-    &:hover {
-        background-color: $accent-color;
-    }
+  &:hover {
+    background-color: $accent-color;
+  }
 
-    &:focus {
-        background-color: $accent-color;
-        color: $text-reverse-color;
-    }
+  &:focus {
+    background-color: $accent-color;
+    color: $text-reverse-color;
+  }
 }
