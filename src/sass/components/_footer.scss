@@ -1,18 +1,20 @@
-.container {
-  position: relative;
-}
-footer {
+.footer {
   background-color: $bgcolor-main;
   padding-top: 20px;
-  @include tablet {
+  @include tablet() {
     padding-top: 40px;
   }
-  @include desktop {
+  @include desktop() {
     padding-top: 60px;
   }
 }
-.button-footer-list {
-  @include tablet {
+
+.footer__container {
+  position: relative;
+}
+
+.footer-button__list {
+  @include tablet() {
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -28,8 +30,9 @@ footer {
   text-align: center;
   color: $text-main-color;
   border-radius: 10px;
-  transition: background-color 250ms linear, color 250ms linear,
-    border-color 250ms linear;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition,
+    border-color $time-transition $function-transition;
 }
 .button-location {
   background-color: $main-color;
@@ -67,15 +70,15 @@ footer {
   display: flex;
   gap: 20px;
   justify-content: end;
-  @include tablet {
+  @include tablet() {
     gap: 30px;
   }
-  .item {
+  .msg-list__item {
     a {
       &:hover .msg-icon,
       &:focus .msg-icon,
       &:active .msg-icon {
-        fill: #fcfcfc;
+        fill: $text-reverse-color;
       }
     }
   }
@@ -94,34 +97,36 @@ footer {
   }
   .msg-icon {
     fill: $bgcolor-main;
-    transition: fill 250ms linear;
+    transition: fill $time-transition $function-transition;
   }
 }
 .footer-flex {
-  @include tablet {
+  @include tablet() {
     display: flex;
     justify-content: space-between;
   }
-    @include desktop {
+  @include desktop() {
     margin-top: 120px;
     margin-bottom: 60px;
   }
 }
-.footer-text-wrap {
+.footer__flex-text {
   margin-top: 60px;
   margin-bottom: 60px;
-  @include tablet {
+  @include tablet() {
     max-width: 352px;
     margin-top: 40px;
     margin-bottom: 32px;
   }
-    @include desktop {
+  @include desktop() {
     margin: 0;
     max-width: 504px;
   }
 }
 .text-footer {
   color: $text-reverse-color;
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
   &.up {
@@ -129,12 +134,12 @@ footer {
     font-size: 18px;
     line-height: calc(22 / 18);
     text-transform: uppercase;
-    @include tablet {
+    @include tablet() {
       margin-bottom: 8px;
       font-size: 26px;
       line-height: calc(32 / 26);
     }
-        @include desktop {
+    @include desktop() {
       margin-bottom: 14px;
       font-weight: 400;
       font-size: 30px;
@@ -146,11 +151,11 @@ footer {
     font-size: 34px;
     line-height: calc(41 / 34);
     letter-spacing: 0.04em;
-    @include tablet {
+    @include tablet() {
       font-size: 48px;
       line-height: calc(59 / 48);
     }
-    @include desktop {
+    @include desktop() {
       font-size: 58px;
       line-height: calc(71 / 58);
       letter-spacing: 0.06em;
@@ -161,18 +166,19 @@ footer {
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: right;
-  @include font(12px, 1.9, 700);
-  @include tablet {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.9;
+  @include tablet() {
     font-size: 14px;
     margin-top: 34px;
   }
-    @include desktop {
+  @include desktop() {
     margin-bottom: 0;
     margin-top: 40px;
   }
   a {
     text-decoration: none;
-    font-weight: 500;
     color: $text-reverse-color;
     &:hover,
     &:focus {
@@ -187,7 +193,7 @@ footer {
   @include font(14px, 1.52, 700);
   text-align: center;
   color: #7a7a7a;
-  @include tablet {
+  @include tablet() {
     max-width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -210,17 +216,19 @@ footer {
     max-width: 320px;
     height: 1px;
     background-color: #e1e1e1;
-    @media screen and (min-width: 768px) {
+    @include tablet() {
       max-width: 768px;
       left: -31px;
     }
+
+    // what this ?----------------------
     @media screen and (min-width: 768px) {
       max-width: 100%;
       left: 0;
     }
   }
 }
-.flex-wrap {
+.footer__flex-wrap {
   //   margin-right: 20px;
   display: flex;
   flex-direction: column;
