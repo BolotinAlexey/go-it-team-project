@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.button-footer-list {
+.footer-button__list {
   @include tablet() {
     display: flex;
     gap: 16px;
@@ -32,8 +32,9 @@
   text-align: center;
   color: $text-main-color;
   border-radius: 10px;
-  transition: background-color 250ms linear, color 250ms linear,
-    border-color 250ms linear;
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition,
+    border-color $time-transition $function-transition;
 }
 .button-location {
   background-color: $main-color;
@@ -74,12 +75,12 @@
   @include tablet() {
     gap: 30px;
   }
-  .item {
+  .msg-list__item {
     a {
       &:hover .msg-icon,
       &:focus .msg-icon,
       &:active .msg-icon {
-        fill: #fcfcfc;
+        fill: $text-reverse-color;
       }
     }
   }
@@ -98,7 +99,7 @@
   }
   .msg-icon {
     fill: $bgcolor-main;
-    transition: fill 250ms linear;
+    transition: fill $time-transition $function-transition;
   }
 }
 .footer-flex {
@@ -111,7 +112,7 @@
     margin-bottom: 60px;
   }
 }
-.footer-text-wrap {
+.footer__flex-text {
   margin-top: 60px;
   margin-bottom: 60px;
   @include tablet() {
@@ -125,7 +126,7 @@
   }
 }
 .text-footer {
-  color: #fcfcfc;
+  color: $text-reverse-color;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -180,7 +181,7 @@
   }
   a {
     text-decoration: none;
-    color: #fcfcfc;
+    color: $text-reverse-color;
     &:hover,
     &:focus {
       color: $accent-color;
@@ -223,13 +224,15 @@
       max-width: 768px;
       left: -31px;
     }
+
+    // what this ?----------------------
     @media screen and (min-width: 768px) {
       max-width: 100%;
       left: 0;
     }
   }
 }
-.flex-wrap {
+.footer__flex-wrap {
   //   margin-right: 20px;
   display: flex;
   flex-direction: column;
