@@ -6,15 +6,16 @@
   display: flex;
   align-items: baseline;
   padding-top: 12px;
-  // padding: 12px 20px 0;
+  padding: 12px 20px 0;
 
   @include tablet {
-    // padding: 20px 32px 0;
+    padding: 20px 32px 0;
     align-items: center;
   }
 
   @include desktop {
-    // padding: 8px 16px 0;
+    padding: 8px 16px 0;
+   
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
   }
@@ -24,6 +25,7 @@
   display: flex;
   align-items: center;
   margin-right: auto;
+  margin-top: 32px;
 }
 
 .header-list {
@@ -102,6 +104,10 @@
       fill: #ffffff;
     }
   }
+
+  @include desktop {
+    margin-top: 20px;
+  }
 }
 
 .btn-arrow {
@@ -118,6 +124,7 @@
   height: 100vh;
   background: $bgcolor-modal;
   top: 0;
+  right: 0;
 
   display: flex;
   flex-direction: column;
@@ -382,9 +389,9 @@
   &:focus {
     color: $text-reverse-color;
   }
-  // &:disabled {
-  //   color: $disabled-color;
-  // }
+  &:disabled {
+    color: $disabled-color;
+  }
 }
 
 // ____________________HERO IMAGES__________________________
