@@ -1,4 +1,3 @@
-import './js/menu';
 import './js/modal';
-import './js/gallery';
-
+import './js/customers';
+import './js/menu';
