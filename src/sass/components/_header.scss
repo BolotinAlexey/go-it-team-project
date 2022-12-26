@@ -4,7 +4,7 @@
 
 .header_container {
   display: flex;
-  align-items: baseline;
+  // align-items: baseline;
   padding-top: 12px;
   padding: 12px 20px 0;
 
@@ -15,10 +15,9 @@
 
   @include desktop {
     padding: 8px 16px 0;
-   
   }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-  }
+  // @media screen and (min-width: 320px) and (max-width: 767px) {
+  // }
 }
 
 .header-nav {
@@ -60,6 +59,7 @@
   display: block;
   border: none;
   background-color: transparent;
+  order: 1;
 
   @include desktop {
     display: none;
@@ -72,6 +72,10 @@
 .header-btn {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     display: none;
+  }
+
+  @include desktop {
+    margin-top: 20px;
   }
 
   @include tablet {
@@ -120,7 +124,7 @@
 
 .mob-menu {
   position: fixed;
-  z-index: 4;
+  z-index: 400;
 
   width: 100vw;
   height: 100vh;
