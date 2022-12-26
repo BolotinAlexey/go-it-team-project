@@ -2,6 +2,16 @@
   background: #84a178;
 }
 
+.container-about {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 1200px){
+      padding-left: 18px;
+      padding-right: 18px;
+  }
+}
+
 .about-page {
   font-family: 'Montserrat';
   font-weight: 700;
@@ -36,98 +46,190 @@
 }
 
 .about-title {
-  font-family: 'Seymour One';
+  font-family:'Seymour One' ;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 1.25;
+  font-size: 30px;
+  line-height: 1.26;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #fcfcfc;
-  margin-bottom: 372px;
+  color: $text-reverse-color;
+  margin-bottom: 32px;
 
-  @include tablet() {
-    font-family: 'Seymour One';
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #fcfcfc;
-    margin-bottom: 80px;
+  @media screen and (min-width: 768px) {
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 1.26;
+      margin-bottom: 40px;
   }
 
-  @include desktop() {
-    font-family: 'Seymour One';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.25;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #fcfcfc;
-    margin-bottom: 172px;
+  @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.25;
   }
 }
 
-.about-paragraph {
-  font-family: 'Montserrat';
+
+
+
+.about-cow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+  flex-direction: column;  
+  }
+      
+
+  @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+      
+      
+  }
+
+}
+
+
+.about__cow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; 
+  width: 278px;
+  height: 278px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(248,210,78,.7), rgba(248,210,78,.7)), #D9D9D9;
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+
+  @media screen and (min-width: 768px) {
+      margin-right: 32px;
+      width: 330px;
+      height: 330px;
+      
+      
+  }
+  @media screen and (min-width: 1200px) {
+      margin-right: 100px;
+      width: 500px;
+      height: 500px;
+      
+  }
+}  
+
+.about-cow__picture {
+  transform: translateY(22px);
+
+    @media screen and (min-width: 768px) {
+        transform: translateY(26px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        transform: translateY(39px);
+    }
+}
+
+.about__cow-image {
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  border-radius: 50%; 
+
+  @media screen and (min-width: 768px) {
+  width: 330px;
+  max-width: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+  width: 490px;
+  }
+}
+
+
+
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  font-family: 'Monsterrat', 'san-serif';
   font-weight: 400;
   font-size: 12px;
   line-height: 1.75;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #fcfcfc;
+  color: $text-reverse-color;
 
-  @include tablet() {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    text-align: center;
-    color: #fcfcfc;
-    text-align: left;
+  @media screen and (min-width: 768px) {
+      width: 334px;
+      text-align: start;
   }
 
-  @include desktop() {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.75;
-    letter-spacing: 0.04em;
-    color: #fcfcfc;
-    text-align: left;
+  @media screen and (min-width: 1200px) {
+      width: 463px;
+      font-size: 16px;
+      line-height: 1.75;
+
+  }
+
+
+  @media screen and (min-width: 768px) {
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+  
+}
+
+
+
+
+
+.about-paragraph {
+  margin-bottom: 4px;
+          
+  @media screen and (min-width: 768px) {
+      margin-bottom: 8px; 
   }
 }
 
-.button {
-  font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.29;
+.technology-info_paragraph--no-margin-bottom {
+  margin-bottom: 0;
+}
+  
+
+
+.cow-button {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #000000;
-  background: #f8d24e;
+
+  min-width: 152px;
+  color: $text-main-color;
+  background-color: $main-color;
+  transition: color .25s cubic-bezier(.4,0,.2,1),background-color .25s cubic-bezier(.4,0,.2,1);
+
+  cursor: pointer;
+
+  border-width: 0;
   border-radius: 10px;
-  width: 164px;
-  height: 42px;
 
-  @include mobile() {
-    margin: 0 auto;
-    display: block;
+  margin-top: 20px;
+  padding: 12px 34px;
+ 
+  font-family:'Montserrat' ;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29;
+  
+
+  @media screen and (min-width: 768px) {
+      margin-top: 48px;
+
   }
+
+
 }
-
-.about-text {
-  padding-bottom: 50px;
-
-  @include tablet() {
-    flex-direction: row;
-  }
-
-  @include desktop() {
-    flex-direction: column;
-  }
-}
+  
+.about-icon {
+  margin-left: 14px;
+  stroke: currentColor;
+} 
