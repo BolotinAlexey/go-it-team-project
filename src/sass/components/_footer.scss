@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.footer-button__list {
+.footer__button-list {
   @include tablet() {
     display: flex;
     gap: 16px;
