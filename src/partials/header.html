@@ -1,4 +1,143 @@
 
+
+<!-- -------------------HEADER------------------ -->
+
+<header class="header--color ">
+ <div class="container header_container">
+  <a class="header_logo" href="#">
+    <picture>
+      <source
+          srcset="./images/header/logo-desk.png 1x, ./images/header/logo-desk-2x.png 2x"
+          media="(min-width: 1200px)">
+      <source
+          srcset="./images/header/logo-tab.png 1x, ./images/header/logo-tab-2x.png 2x"
+          media="(min-width: 768px)">
+      <source
+          srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
+          media="(max-width: 767px)">
+      <img src="./images/header/logo-mob.png" alt="logo">
+  </picture>
+  </a> 
+    <nav class="header-nav">
+        <ul class="header-list">
+          <li class="header-item"><a class="header-link" href="#home">Home</a></li>
+          <li class="header-item"><a class="header-link" href="#made">How it’s made?</a></li>
+          <li class="header-item"><a class="header-link" href="#products">Our products</a></li>
+          <li class="header-item"><a class="header-link" href="#contacts">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="menu-open" data-menu-open>
+        <svg class="menu-open-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <button type="button" class="button header-btn js-open-modal" data-modal="buy">Buy now 
+        <svg class="btn-arrow" width="12" height="12">
+        <use href="./images/icons.svg#icon-arrow-single"></use>
+    </svg></button>
+  </div>
+
+<!--------- mobile menu-------->
+
+<div class="mob-menu is-hidden" data-menu>
+  <div class="menu-header">
+    <a href="#">
+      <picture>
+        <source
+            srcset="./images/header/logo-tab.png 1x, ./images/header/logo-tab-2x.png 2x"
+            media="(min-width: 768px)">
+        <source
+            srcset="./images/header/logo-mob.png 1x, ./images/header/logo-mob-2x.png 2x"
+            media="(max-width: 767px)">
+        <img src="./images/header/logo-mob.png" alt="logo">
+    </picture>
+    </a>
+    <button type="button" class="menu-close" data-menu-close>
+      <svg class="menu-open-close" width="32" height="32">
+          <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <nav>
+    <ul class="menu-list">
+      <li class="menu-item"><a class="menu-link" href="#home">Home</a></li>
+      <li class="menu-item"><a class="menu-link" href="#made">How it’s made?</a></li>
+      <li class="menu-item"><a class="menu-link" href="#products">Our products</a></li>
+      <li class="menu-item"><a class="menu-link" href="#contacts">Contact</a></li>
+    </ul>
+  </nav>
+  <button type="button" class="button menu-btn">Buy now 
+    <svg class="btn-arrow" width="12" height="12">
+    <use href="./images/icons.svg#icon-arrow-single"></use>
+</svg></button>
+</header>
+
+<!-- --------------HERO----------------- -->
+
+    <section class="hero-bgr" id="home">
+      <div class="hero container">
+        <div class="hero-wrap">
+          <h1 class="hero-title">ice cream made with <span class="hero-title-size">passion</span> </h1>
+          <ul class="hero-headline">
+            <li><p class="hero-count">16</p></li>
+            <li><p class="hero-subject">cafes</p></li>
+            <li><p class="hero-count">23</p></li>
+            <li><p class="hero-subject hero-subject-margin">food trucks</p></li>
+          </ul>
+        </div>
+
+        <ul class="hero-buttons">
+          <li><a href="#products" class="btn-products">Products</a></li>
+          <li><a href="#made" class="btn-made">How it’s made?</a></li>
+        </ul>
+
+        <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <div class="hero-icon">
+          <svg class="hero-arrow" width="40" height="16">
+            <use href="./images/icons.svg#icon-arrow"></use>
+        </svg>
+        </div>
+
+        <picture >
+          <source
+          srcset="./images/header/manyice-desk.png 1x, ./images/header/manyice-desk-2x.png 2x"
+          media="(min-width: 1200px)">
+          <source
+          srcset="./images/header/many-ice-tab.png 1x, ./images/header/manyice-tab-2x.png 2x "
+          media="(min-width: 768px)">
+          <img class="picture-ice" src="./images/header/manyice-desk.png" alt="ice">
+        </picture>
+
+        <div class="hero-img">
+          <picture>
+            <source
+            srcset="./images/header/ice-desk.png 1x, ./images/header/ice-desk-2x.png 2x"
+            media="(min-width: 1200px)">
+        <source
+            srcset="./images/header/ice-tab.png 1x, ./images/header/ice-tab-2x.png 2x"
+            media="(min-width: 768px)">
+        <source
+            srcset="./images/header/ice-mob.png 1x, ./images/header/ice-mob-2x.png 2x"
+            media="(max-width: 767px)">
+            <img class="hero-img-ice" src="./images/header/ice-desk.png" alt="ice">
+        </picture>
+
+        <picture>
+          <source
+              srcset="./images/header/dots-desk.png 1x, ./images/header/dots-desk-2x.png 2x"
+              media="(min-width: 1200px)">
+          <source
+              srcset="./images/header/dots-tab.png 1x, ./images/header/dots-tab-2x.png 2x "
+              media="(min-width: 768px)">
+          <source
+              srcset="./images/header/dots-mob.png 1x, ./images/header/dots-mob-2x.png 2x"
+              media="(max-width: 767px)">
+              <img class="hero-img-dots" src="./images/header/dots-desk.png" alt="dots">
+      </picture>
+        </div> 
+  </div>
+  </section>
+
 <header class="header--color ">
   <div class="container header_container">
    <a class="header_logo" href="#">
