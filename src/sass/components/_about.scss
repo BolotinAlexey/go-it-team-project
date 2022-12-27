@@ -83,10 +83,16 @@
 }
 
 .about__cow-container {
-  @extend %flex-center;
+  @media screen and (max-width: 340px) {
+    max-width: 278px;
+    height: auto;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 40px;
-  max-width: 278px;
-  height: auto;
+  width: 278px;
+  height: 278px;
   border-radius: 50%;
   background: linear-gradient(
       0deg,
