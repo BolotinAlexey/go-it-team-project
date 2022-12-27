@@ -5,27 +5,29 @@
 .header_container {
   display: flex;
   align-items: baseline;
-  padding-top: 12px;
   padding: 12px 20px 0;
 
   @include tablet {
-    padding: 20px 32px 0;
     align-items: center;
+    padding: 20px 32px 0;
   }
 
   @include desktop {
     padding: 8px 16px 0;
-   
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
   }
 }
 
+.header_logo {
+  @include desktop {
+    margin-right: 308px;
+  }
+}
 .header-nav {
   display: flex;
   align-items: center;
   margin-right: auto;
-  margin-top: 32px;
 }
 
 .header-list {
@@ -35,7 +37,7 @@
     display: flex;
     align-items: center;
     gap: 28px;
-    margin-left: 308px;
+    padding: 32px 0 13px;
   }
 }
 
@@ -44,7 +46,7 @@
   font-family: 'Montserrat';
   @include font(16px, calc(20 / 16), $fw: 700);
   color: $text-reverse-color;
-  padding: 32px 0 13px;
+
   transition: color $time-transition $function-transition;
 
   &:hover,
@@ -82,6 +84,7 @@
     background: $main-color;
     border-radius: 10px;
     padding: 12px 36px;
+    cursor: pointer;
 
     @include font(14px, calc(17 / 14), $fw: 600);
     text-align: center;
@@ -245,6 +248,7 @@
   color: $text-reverse-color;
   padding-top: 50px;
   margin-bottom: 32px;
+  max-width: 247px;
 
   @include tablet {
     padding-top: 14px;
@@ -461,9 +465,10 @@
   bottom: 0;
   left: 63px;
   z-index: 2;
+  min-width: 177px;
 
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    min-width: 177px;
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    max-width: 480px;
   }
 
   @include tablet {
@@ -481,9 +486,13 @@
   left: -20px;
   z-index: 1;
   min-width: 320px;
-  width: 100%;
+  max-width: 480px;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    min-width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
     left: -32px;
     min-width: 768px;
   }
