@@ -9,8 +9,11 @@
   }
 }
 
-.footer__container {
+.container {
   position: relative;
+  @media screen and (max-width: 767px) {
+    max-width: 320px;
+  }
 }
 
 .footer__button-list {
@@ -20,7 +23,20 @@
     justify-content: center;
   }
 }
+.button-footer__arrow-single {
+  position: absolute;
+  top: 15px;
+  fill: currentColor;
+  &.icon-location {
+    right: 39px;
+  }
+  &.icon-francise {
+    top: 13px;
+    right: 49px;
+  }
+}
 .button-footer {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -100,7 +116,7 @@
     transition: fill $time-transition $function-transition;
   }
 }
-.footer-flex {
+.footer__flex {
   @include tablet() {
     display: flex;
     justify-content: space-between;
@@ -188,7 +204,7 @@
   }
 }
 .footer-index {
-  max-width: 160px;
+  max-width: 157px;
   padding-top: 20px;
   padding-bottom: 20px;
   @include font(14px, 1.52, 700);
@@ -206,12 +222,12 @@
 //   border-top: 1px solid #e1e1e1;
 // }
 .foot {
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: center;
   &::before {
     content: '';
-    left: -19px;
+    left: 0px;
     position: absolute;
     width: 115%;
     max-width: 320px;
