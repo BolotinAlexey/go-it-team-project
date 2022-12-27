@@ -4,26 +4,27 @@
 
 .header_container {
   display: flex;
-  align-items: baseline;
+  // align-items: baseline;
   padding-top: 12px;
-  // padding: 12px 20px 0;
+  padding: 12px 20px 0;
 
   @include tablet {
-    // padding: 20px 32px 0;
+    padding: 20px 32px 0;
     align-items: center;
   }
 
   @include desktop {
-    // padding: 8px 16px 0;
+    padding: 8px 16px 0;
   }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-  }
+  // @media screen and (min-width: 320px) and (max-width: 767px) {
+  // }
 }
 
 .header-nav {
   display: flex;
   align-items: center;
   margin-right: auto;
+  margin-top: 32px;
 }
 
 .header-list {
@@ -44,11 +45,13 @@
   color: $text-reverse-color;
   padding: 32px 0 13px;
   transition: color $time-transition $function-transition;
+  cursor: url(./../images/header/header-cursor.png) 19 24, auto;
 
   &:hover,
   &:focus,
   &:active {
     color: $main-color;
+    cursor: url(./../images/header/header-cursor.png) 19 24, auto;
   }
 }
 
@@ -68,6 +71,10 @@
 .header-btn {
   @media screen and (min-width: 320px) and (max-width: 767px) {
     display: none;
+  }
+
+  @include desktop {
+    margin-top: 20px;
   }
 
   @include tablet {
@@ -102,6 +109,10 @@
       fill: #ffffff;
     }
   }
+
+  @include desktop {
+    margin-top: 20px;
+  }
 }
 
 .btn-arrow {
@@ -112,24 +123,29 @@
 
 .mob-menu {
   position: fixed;
-  z-index: 4;
+  z-index: 400;
 
   width: 100vw;
   height: 100vh;
   background: $bgcolor-modal;
   top: 0;
+  right: 0;
 
   display: flex;
   flex-direction: column;
   overflow: auto;
   overflow-y: scroll;
 
+  transition: transform 500ms $function-transition;
+  transform: translateX(0);
+
   @include desktop {
     display: none;
   }
 }
 .is-hidden {
-  opacity: 0;
+  transform: translateX(100vw);
+  // opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
@@ -382,9 +398,9 @@
   &:focus {
     color: $text-reverse-color;
   }
-  // &:disabled {
-  //   color: $disabled-color;
-  // }
+  &:disabled {
+    color: $disabled-color;
+  }
 }
 
 // ____________________HERO IMAGES__________________________
@@ -475,6 +491,7 @@
   z-index: 1;
   min-width: 320px;
   width: 100%;
+  pointer-events: none;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     left: -32px;

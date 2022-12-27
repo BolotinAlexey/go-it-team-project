@@ -16,7 +16,7 @@
   position: absolute;
 
   animation-name: vision;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: $function-transition;
   animation-duration: 12s;
   animation-iteration-count: infinite;
 }
