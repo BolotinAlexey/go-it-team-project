@@ -26,6 +26,9 @@
 }
 
 .advantages__list {
+  @media screen and(max-width:767px) {
+    padding-top: 50px;
+  }
   @include tablet {
     display: flex;
     flex-wrap: wrap;
