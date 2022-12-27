@@ -1,13 +1,13 @@
 .contacts {
   background: $bgcolor-main;
-  min-height: 935px;
+  height: 935px;
   padding-bottom: 20px;
   @include tablet {
-    min-height: 278px;
+    height: 278px;
     padding-bottom: 40px;
   }
   @include desktop {
-    min-height: 474px;
+    height: 474px;
     padding-bottom: 60px;
   }
 }
@@ -17,19 +17,22 @@
   justify-content: center;
   top: -355px;
   margin: 0 auto;
+  min-width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
   @include tablet {
     top: -300px;
-    width: 704px;
     padding-left: 32px;
     padding-right: 32px;
   }
   @include desktop {
     top: -128px;
-    width: 1168px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
-}
+
 .contacts-thumb {
     display: flex;
     align-items: center;
@@ -41,8 +44,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+
     }
     @include tablet {
     marging-bottom: 40px;
@@ -69,11 +71,15 @@
     @include tablet {
     width: calc((100% - 32px) / 3);
     min-height: 537px;
+    padding-right: 24px;
+    padding-left: 24px;
     }
     @include desktop {
-            width: calc((100% - 64px) / 3);
-            justify-content: center;
-            min-height: 542px;
+    width: calc((100% - 64px) / 3);
+    justify-content: center;
+    min-height: 542px;
+    padding-right: 40px;
+    padding-left: 40px;
         }
 }
 
