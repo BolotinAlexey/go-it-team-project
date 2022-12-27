@@ -2,6 +2,8 @@
   padding: 28px;
   width: 100%;
   min-height: auto;
+  max-height: 100vh;
+  overflow-y: auto;
 
   @media screen and (min-width: 280px) {
     width: 280px;
