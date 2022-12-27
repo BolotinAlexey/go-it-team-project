@@ -3,6 +3,14 @@ body {
   color: $text-main-color;
 }
 
+.modal button {
+  cursor: url(./../images/header/header-cursor.png) 0 0, auto;
+}
+
+* a {
+  cursor: url(./../images/header/header-cursor.png) 0 0, auto;
+}
+
 ul {
   list-style: none;
 }
@@ -14,7 +22,7 @@ img {
 }
 
 button {
-  cursor: pointer;
+  cursor: url(./../images/header/header-cursor.png) 0 0, auto;
   border: none;
 }
 
