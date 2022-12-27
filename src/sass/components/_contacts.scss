@@ -14,8 +14,10 @@
 }
 .contacts-position {
   position: relative;
+  display: flex;
+  justify-content: center;
   top: -355px;
-  // margin: 0 auto;
+  margin: 0 auto;
   @include tablet {
     top: -300px;
     width: 704px;
