@@ -45,13 +45,13 @@
   color: $text-reverse-color;
   padding: 32px 0 13px;
   transition: color $time-transition $function-transition;
-  cursor: url(./../images/header/header-cursor.png) 19 24, auto;
+  cursor: url(./../images/header/header-cursor.png) 0 0, auto;
 
   &:hover,
   &:focus,
   &:active {
     color: $main-color;
-    cursor: url(./../images/header/header-cursor.png) 19 24, auto;
+    cursor: url(./../images/header/header-cursor.png) 0 0, auto;
   }
 }
 
@@ -69,7 +69,7 @@
 }
 
 .header-btn {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 
@@ -241,14 +241,29 @@
 }
 // ___________________HERO_______________________________________________
 
-.hero-bgr {
+.hero {
   background-color: $bgcolor-main;
   position: relative;
 }
 
+.hero__container {
+  background: no-repeat bottom/contain url(../images/header/dots-mob.png);
+
+  @include tablet {
+    background-image: url(../images/header/dots-tab.png);
+  }
+  @include desktop {
+    background-image: url(../images/header/dots-desk.png);
+  }
+}
+
 .hero-title {
+  max-width: 247px;
+  @media screen and (max-width: 320px) {
+    overflow: hidden;
+  }
   font-family: 'Seymour One';
-  @include font(26px, calc(33 / 26), $fw: 400);
+  @include font(26px, calc(33 / 26));
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $text-reverse-color;
@@ -424,24 +439,6 @@
   }
 }
 
-.hero-text {
-  display: none;
-
-  @include tablet {
-    display: inline-block;
-    @include font(12px, calc(17 / 12), $fw: 400);
-    color: $text-reverse-color;
-    max-width: 139px;
-    margin: 0 0 0 184px;
-    padding-bottom: 12px;
-  }
-  @include desktop {
-    padding-bottom: 24px;
-    max-width: 185px;
-    margin: 0 0 0 241px;
-  }
-}
-
 .hero-icon {
   @include tablet {
     padding-bottom: 24px;
@@ -451,55 +448,96 @@
   }
 }
 
-.hero-arrow {
-  display: none;
-
-  @include tablet {
-    display: block;
-    fill: $text-reverse-color;
-    margin: 0 0 0 184px;
-  }
-
-  @include desktop {
-    margin: 0 0 0 241px;
-  }
-}
-
 .hero-img-ice {
   position: absolute;
   bottom: 0;
-  left: 63px;
   z-index: 2;
+  // left: 63px;
+  @media screen and (max-width: 767px) {
+    left: calc(50%);
+    transform: translateX(-50%);
+  }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     min-width: 177px;
   }
 
   @include tablet {
-    left: 376px;
+    // left: 376px;
+    right: 92px;
+  }
+
+  // @include desktop {
+  //   left: 636px;
+  // }
+}
+
+// .hero-img-dots {
+//   position: absolute;
+//   bottom: 0;
+//   left: -20px;
+//   z-index: 1;
+//   min-width: 320px;
+//   width: 100%;
+//   pointer-events: none;
+
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     left: -32px;
+//     min-width: 768px;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     min-width: 1200px;
+//     left: -16px;
+//   }
+// }
+
+.details {
+  display: none;
+  position: relative;
+  height: 160px;
+  @include tablet {
+    display: block;
+    margin-left: 184px;
   }
 
   @include desktop {
-    left: 636px;
+    margin-left: 241px;
+    height: 250px;
+    top: -90px;
   }
 }
 
-.hero-img-dots {
-  position: absolute;
-  bottom: 0;
-  left: -20px;
-  z-index: 1;
-  min-width: 320px;
-  width: 100%;
-  pointer-events: none;
+.summary {
+  display: contents;
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    left: -32px;
-    min-width: 768px;
+.hero-text {
+  // display: none;
+
+  max-width: 139px;
+  color: $text-reverse-color;
+
+  @include font(12px, calc(17 / 12));
+
+  // @include tablet {
+  //   max-width: 139px;
+  // }
+  @include desktop {
+    @include font(14px, calc(19.6 / 14));
+    max-width: 185px;
   }
+}
 
-  @media screen and (min-width: 1200px) {
-    min-width: 1200px;
-    left: -16px;
+.hero-arrow {
+  // display: none;
+  position: relative;
+  display: block;
+  fill: $text-reverse-color;
+  top: 130px;
+  cursor: url(./../images/header/header-cursor.png) 0 0, auto;
+
+  @include desktop {
+    top: 230px;
   }
 }
