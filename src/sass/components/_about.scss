@@ -6,9 +6,9 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @media screen and (min-width: 1200px){
-      padding-left: 18px;
-      padding-right: 18px;
+  @media screen and (min-width: 1200px) {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -46,7 +46,7 @@
 }
 
 .about-title {
-  font-family:'Seymour One' ;
+  font-family: 'Seymour One';
   font-weight: 400;
   font-size: 30px;
   line-height: 1.26;
@@ -57,93 +57,93 @@
   margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
-      font-weight: 800;
-      font-size: 34px;
-      line-height: 1.26;
-      margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.26;
+    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1200px) {
-      font-size: 36px;
-      line-height: 1.25;
+    font-size: 36px;
+    line-height: 1.25;
   }
 }
-
-
-
 
 .about-cow {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 767px) {
-  flex-direction: column;  
+  @media screen and (max-width: 319px) {
+    width: 100%;
   }
-      
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 
   @media screen and (min-width: 1200px) {
-      justify-content: flex-start;
-      
-      
+    justify-content: flex-start;
   }
-
 }
-
 
 .about__cow-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px; 
-  width: 278px;
-  height: 278px;
+  margin-bottom: 40px;
   border-radius: 50%;
-  background: linear-gradient(0deg, rgba(248,210,78,.7), rgba(248,210,78,.7)), #D9D9D9;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 320px) {
+    width: 278px;
+    height: 278px;
+  }
   @media screen and (min-width: 768px) {
-      margin-right: 32px;
-      width: 330px;
-      height: 330px;
-      
-      
+    margin-right: 32px;
+    width: 330px;
+    height: 330px;
   }
   @media screen and (min-width: 1200px) {
-      margin-right: 100px;
-      width: 500px;
-      height: 500px;
-      
+    margin-right: 100px;
+    width: 500px;
+    height: 500px;
   }
-}  
+}
 
 .about-cow__picture {
   transform: translateY(22px);
 
-    @media screen and (min-width: 768px) {
-        transform: translateY(26px);
-    }
+  @media screen and (min-width: 768px) {
+    transform: translateY(26px);
+  }
 
-    @media screen and (min-width: 1200px) {
-        transform: translateY(39px);
-    }
+  @media screen and (min-width: 1200px) {
+    transform: translateY(39px);
+  }
 }
 
 .about__cow-image {
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-  border-radius: 50%; 
+  border-radius: 50%;
 
   @media screen and (min-width: 768px) {
-  width: 330px;
-  max-width: none;
+    width: 330px;
+    max-width: none;
   }
 
   @media screen and (min-width: 1200px) {
-  width: 490px;
+    width: 490px;
   }
 }
-
-
-
 
 .about-text {
   display: flex;
@@ -160,42 +160,33 @@
   color: $text-reverse-color;
 
   @media screen and (min-width: 768px) {
-      width: 334px;
-      text-align: start;
+    width: 334px;
+    text-align: start;
   }
 
   @media screen and (min-width: 1200px) {
-      width: 463px;
-      font-size: 16px;
-      line-height: 1.75;
-
+    width: 463px;
+    font-size: 16px;
+    line-height: 1.75;
   }
-
 
   @media screen and (min-width: 768px) {
-      align-items: flex-start;
-      justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  
 }
-
-
-
-
 
 .about-paragraph {
   margin-bottom: 4px;
-          
+
   @media screen and (min-width: 768px) {
-      margin-bottom: 8px; 
+    margin-bottom: 8px;
   }
 }
 
 .technology-info_paragraph--no-margin-bottom {
   margin-bottom: 0;
 }
-  
-
 
 .cow-button {
   display: flex;
@@ -205,7 +196,8 @@
   min-width: 152px;
   color: $text-main-color;
   background-color: $main-color;
-  transition: color .25s cubic-bezier(.4,0,.2,1),background-color .25s cubic-bezier(.4,0,.2,1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
 
@@ -214,22 +206,18 @@
 
   margin-top: 20px;
   padding: 12px 34px;
- 
-  font-family:'Montserrat' ;
+
+  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 600;
   line-height: 1.29;
-  
 
   @media screen and (min-width: 768px) {
-      margin-top: 48px;
-
+    margin-top: 48px;
   }
-
-
 }
-  
+
 .about-icon {
   margin-left: 14px;
   stroke: currentColor;
-} 
+}
