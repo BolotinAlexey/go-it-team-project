@@ -4,13 +4,15 @@
     closeMenuBtn: document.querySelector('[data-menu-close]'),
     menu: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
-   
-  
+    links: document.querySelectorAll('.menu-link'),
   };
+
+  refs.links.forEach(element => {
+    element.addEventListener('click', toggleMenu);
+  });
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
-  
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
@@ -21,5 +23,4 @@
     refs.menu.classList.add('is-hidden');
     refs.body.classList.remove('no-scroll');
   }
-  
 })();
