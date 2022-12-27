@@ -136,12 +136,16 @@
   overflow: auto;
   overflow-y: scroll;
 
+  transition: transform 500ms $function-transition;
+  transform: translateX(0);
+
   @include desktop {
     display: none;
   }
 }
 .is-hidden {
-  opacity: 0;
+  transform: translateX(100vw);
+  // opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
