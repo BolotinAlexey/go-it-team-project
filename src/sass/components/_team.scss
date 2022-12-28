@@ -22,6 +22,8 @@
 
 .team__title {
   padding: 20px 0px 30px;
+  font-size: 28px;
+  word-spacing: 0.8em;
 }
 
 .btn__team {
@@ -56,7 +58,16 @@
 .team-member {
   width: 100vw;
   height: 100vh;
+  padding: 12px;
   flex-direction: column;
   @extend %flex-center;
   gap: 50px;
+}
+
+.team-member__describe {
+  @include font(18px, 1.37, 500);
+}
+
+.team-member__thimb img {
+  max-height: 456;
 }
