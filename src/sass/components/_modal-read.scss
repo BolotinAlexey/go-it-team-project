@@ -2,6 +2,7 @@
   padding: 28px;
   max-height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
 
   @include tablet() {
     padding: 32px 60px;
@@ -32,4 +33,121 @@
 
 .modal-read__text {
   @include font(14px, 1.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-read__text-sentence-wrap {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.modal-read__text-sentence {
+  position: relative;
+}
+
+.modal-read__text-sentence--one {
+  top: 0;
+  left: -130%;
+
+  .modal-read.active & {
+    transform: translateX(130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 250ms;
+  }
+}
+
+.modal-read__text-sentence--two {
+  top: 0;
+  top: 0;
+  left: 130%;
+
+  .modal-read.active & {
+    transform: translateX(-130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 2000ms;
+  }
+}
+
+.modal-read__text-sentence--three {
+  top: 0;
+  left: -130%;
+
+  .modal-read.active & {
+    transform: translateX(130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 4000ms;
+  }
+}
+
+.modal-read__text-sentence--four {
+  top: 0;
+  left: 130%;
+
+  .modal-read.active & {
+    transform: translateX(-130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 6000ms;
+  }
+}
+
+.modal-read__text-sentence--five {
+  top: 0;
+  left: -130%;
+
+  .modal-read.active & {
+    transform: translateX(130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 8000ms;
+  }
+}
+
+.modal-read__text-sentence--six {
+  top: 0;
+  left: 130%;
+
+  .modal-read.active & {
+    transform: translateX(-130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 10000ms;
+  }
+}
+
+.modal-read__text-sentence--seven {
+  top: 0;
+  left: -130%;
+
+  .modal-read.active & {
+    transform: translateX(130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 12000ms;
+  }
+}
+
+.modal-read__text-sentence--eigth {
+  top: 0;
+  left: 130%;
+
+  .modal-read.active & {
+    transform: translateX(-130%);
+    transition-property: transform;
+    transition-duration: 2000ms;
+    transition-timing-function: $function-transition;
+    transition-delay: 14000ms;
+  }
 }
