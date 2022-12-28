@@ -23,6 +23,8 @@
   /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
+  max-height: 100vh;
+  overflow-y: auto;
 
   /*  Установаем ширину окна  */
   width: 100%;

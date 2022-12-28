@@ -5,6 +5,7 @@
     menu: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
     links: document.querySelectorAll('.menu-link'),
+    buy: document.querySelector('.menu-buy'),
   };
 
   refs.links.forEach(element => {
@@ -13,6 +14,7 @@
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.buy.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');

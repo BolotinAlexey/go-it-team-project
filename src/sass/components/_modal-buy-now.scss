@@ -6,12 +6,12 @@
   overflow-y: auto;
 
   @media screen and (min-width: 280px) {
-    width: 280px;
-    min-height: 991px;
+    // width: 280px;
+    // min-height: 991px;
   }
 
   @media screen and (min-width: $tablet) {
-    width: 568px;
+    min-width: 568px;
     min-height: 644px;
     padding: 32px 54px;
   }

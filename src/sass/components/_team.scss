@@ -1,0 +1,73 @@
+// ----------------TEAM---------------
+
+.team-btn {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+.team {
+  padding: 32px 0;
+}
+
+.team__set {
+  @extend %flex-center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team__title {
+  padding: 20px 0px 30px;
+  font-size: 28px;
+  word-spacing: 0.8em;
+}
+
+.btn__team {
+  width: 200px;
+  min-width: 172px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  background: $main-color;
+  border-radius: 10px;
+  padding: 12px 36px;
+
+  @include font(14px, calc(17 / 14), $fw: 600);
+  text-align: center;
+
+  transition: background-color $time-transition $function-transition,
+    color $time-transition $function-transition,
+    fill $time-transition $function-transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    color: #ffffff;
+    fill: #ffffff;
+  }
+}
+
+.team-member {
+  width: 100vw;
+  height: 100vh;
+  padding: 12px;
+  flex-direction: column;
+  @extend %flex-center;
+  gap: 50px;
+}
+
+.team-member__describe {
+  @include font(18px, 1.37, 500);
+}
+
+.team-member__thimb img {
+  max-height: 456;
+}

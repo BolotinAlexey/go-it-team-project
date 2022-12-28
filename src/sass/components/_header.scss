@@ -63,9 +63,12 @@
   @include desktop {
     display: none;
   }
+  &:hover {
+    color: $main-color;
+  }
 }
 .menu-open-icon {
-  fill: #ffffff;
+  fill: currentColor;
 }
 
 .header-btn {
@@ -167,7 +170,11 @@
   border: none;
   background-color: transparent;
   margin-left: auto;
-  fill: #fcfcfc;
+  color: #fcfcfc;
+
+  &:hover {
+    color: #000000;
+  }
 }
 
 .menu-item {
@@ -180,6 +187,9 @@
   @include tablet {
     margin-bottom: 40px;
   }
+}
+.menu-open-close {
+  fill: currentColor;
 }
 
 .menu-list {
