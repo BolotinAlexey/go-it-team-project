@@ -1,17 +1,4 @@
 .advantages {
-  // <<<<<<< HEAD
-  //   background-color: $bgcolor-main;
-  //   padding-bottom: 32px;
-
-  //   @include tablet {
-  //     padding-bottom: 60px;
-  //     padding-top: 110px;
-  //   }
-
-  //   @include desktop {
-  //     padding-bottom: 80px;
-  //   }
-  // =======
   background-color: $bgcolor-main;
   padding-bottom: 64px;
 
@@ -22,7 +9,6 @@
   @include desktop {
     padding-bottom: 178px;
   }
-  // >>>>>>> main
 }
 
 .advantages__list {

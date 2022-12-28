@@ -1,45 +1,44 @@
 .about {
-  background: #84a178;
+  background: $bgcolor-main;
 }
 
 .container-about {
   padding-left: 20px;
   padding-right: 20px;
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     padding-left: 18px;
     padding-right: 18px;
   }
 }
 
 .about-page {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.22;
+  @include font(18px, 1.22, 700);
+  // font-weight: 700;
+  // font-size: 18px;
+  // line-height: 1.22;
   text-align: center;
   text-transform: uppercase;
-  color: #fcfcfc;
+  color: $text-reverse-color;
   padding-top: 61px;
   padding-bottom: 12px;
 
   @include tablet() {
-    font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 1.73;
+    @include font(22px, 1.73, 800);
+    // font-weight: 800;
+    // font-size: 22px;
+    // line-height: 1.73;
     text-align: center;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #fcfcfc;
   }
 
   @include desktop() {
     font-family: 'Montserrat';
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 1.33;
-    text-align: center;
+    @include font(30px, 1.33, 800);
+    // font-weight: 800;
+    // font-size: 30px;
+    // line-height: 1.33;
+    // text-align: center;
     letter-spacing: 0.04em;
     color: #fcfcfc;
   }
@@ -47,23 +46,24 @@
 
 .about-title {
   font-family: 'Seymour One';
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.26;
+  @include font(30px, 1.26);
+  // font-weight: 400;
+  // font-size: 30px;
+  // line-height: 1.26;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $text-reverse-color;
   margin-bottom: 32px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     font-weight: 800;
     font-size: 34px;
     line-height: 1.26;
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     font-size: 36px;
     line-height: 1.25;
   }
@@ -77,7 +77,7 @@
     flex-direction: column;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     justify-content: flex-start;
   }
 }
@@ -87,9 +87,7 @@
     max-width: 278px;
     height: auto;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   margin-bottom: 40px;
   width: 278px;
   height: 278px;
@@ -102,12 +100,12 @@
     #d9d9d9;
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     margin-right: 32px;
     width: 330px;
     height: 330px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     margin-right: 100px;
     width: 500px;
     height: 500px;
@@ -117,11 +115,11 @@
 .about-cow__picture {
   transform: translateY(22px);
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     transform: translateY(26px);
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     transform: translateY(39px);
   }
 }
@@ -130,23 +128,20 @@
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
   border-radius: 50%;
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     width: 330px;
     max-width: none;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     width: 490px;
   }
 }
 
 .about-text {
-  display: flex;
+  @extend %flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 220px;
-  font-family: 'Monsterrat', 'san-serif';
   font-weight: 400;
   font-size: 12px;
   line-height: 1.75;
@@ -154,27 +149,24 @@
   letter-spacing: 0.04em;
   color: $text-reverse-color;
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     width: 334px;
     text-align: start;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop() {
     width: 463px;
     font-size: 16px;
     line-height: 1.75;
-  }
-
-  @media screen and (min-width: 768px) {
-    align-items: flex-start;
-    justify-content: flex-start;
   }
 }
 
 .about-paragraph {
   margin-bottom: 4px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     margin-bottom: 8px;
   }
 }
@@ -184,15 +176,13 @@
 }
 
 .cow-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 
   min-width: 152px;
   color: $text-main-color;
   background-color: $main-color;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $time-transition $function-transition,
+    background-color $time-transition $function-transition;
 
   border-width: 0;
   border-radius: 10px;
@@ -200,12 +190,11 @@
   margin-top: 20px;
   padding: 12px 34px;
 
-  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 600;
   line-height: 1.29;
 
-  @media screen and (min-width: 768px) {
+  @include tablet() {
     margin-top: 48px;
   }
 }
