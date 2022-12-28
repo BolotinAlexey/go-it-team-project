@@ -4,6 +4,9 @@
   padding-top: 178px;
   padding-bottom: 393px;
   max-width: 100%;
+
+  background-attachment: fixed;
+
   background-image: url(../images/backgrounds/bg-mob\ 1x.jpg);
   @include retina {
     background-image: url(../images/backgrounds/bg-mob\ 2x.jpg);
@@ -13,23 +16,22 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-image: url(../images/backgrounds/bg-tab\ 1x.jpg);
-  @include retina {
-    background-image: url(../images/backgrounds/bg-tab\ 2x.jpg);
-  }
-
   @include tablet() {
     padding-top: 283px;
     padding-bottom: 379px;
+    background-image: url(../images/backgrounds/bg-tab\ 1x.jpg);
+    @include retina {
+      background-image: url(../images/backgrounds/bg-tab\ 2x.jpg);
+    }
+  }
+  @include desktop() {
+    padding-top: 464px;
+    padding-bottom: 228px;
+
     background-image: url(../images/backgrounds/bg-desk\ 1x.jpg);
     @include retina {
       background-image: url(../images/backgrounds/bg-desk\ 2x.jpg);
     }
-  }
-
-  @include desktop() {
-    padding-top: 464px;
-    padding-bottom: 228px;
   }
 }
 
