@@ -68,6 +68,11 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     background: #FCFCFC;
+
+  @media screen and (min-width: 280px) {
+      width: 280px;
+    }
+
     @include tablet {
     width: calc((100% - 32px) / 3);
     min-height: 537px;
@@ -100,6 +105,7 @@
   @include tablet {
     font-size: 16px;
     line-height: 1.4;
+    margin-bottom: 32px;
   }
 }
 
@@ -120,7 +126,6 @@
 
 .adress {
   width: 100%;
-  height: 70px;
   margin-bottom: 24px;
 }
 .adress-list {
@@ -148,6 +153,8 @@
   color: #d6936d;
   line-height: 1.83;
   margin-top: 8px;
+  text-decoration: none;
+  
   @include tablet {
     line-height: 1.83px;
   }
