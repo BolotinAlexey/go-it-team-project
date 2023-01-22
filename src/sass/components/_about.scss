@@ -1,5 +1,9 @@
 .about {
-  background: #84a178;
+  background-color: #84a178;
+}
+
+.container {
+  min-width: 280px;
 }
 
 .about-page {
@@ -35,6 +39,10 @@
   }
 }
 
+.about-card {
+  margin-bottom: 40px;
+}
+
 .about-title {
   font-family: 'Seymour One';
   font-weight: 400;
@@ -44,7 +52,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fcfcfc;
-  margin-bottom: 372px;
+  margin-bottom: 54px;
+  // margin-bottom: 372px;
 
   @include tablet() {
     font-family: 'Seymour One';
@@ -55,7 +64,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #fcfcfc;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
   }
 
   @include desktop() {
@@ -67,7 +76,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #fcfcfc;
-    margin-bottom: 172px;
+    // margin-bottom: 172px;
   }
 }
 
@@ -102,6 +111,8 @@
 }
 
 .button {
+  margin: 0 auto;
+  display: block;
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 14px;
@@ -113,10 +124,9 @@
   border-radius: 10px;
   width: 164px;
   height: 42px;
+  margin-top: 10px;
 
-  @include mobile() {
-    margin: 0 auto;
-    display: block;
+  @include tablet() {
   }
 }
 
